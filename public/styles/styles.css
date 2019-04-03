@@ -1,3 +1,77 @@
-.list-group-item {
-  line-height: 2.5;
+html, body{
+  width: 100%;
+  height: 100%;
+}
+/*----- index/login screen background divs ------*/
+
+.login-background{
+  background-color: rgb(94, 2, 45);
+  border: solid 6px rgb(94, 2, 45);
+  height: 100%;
+  padding:2% 1% 1% 1%;
+}
+
+#login-background{
+  height:40%;
+  background-color: rgb(230, 230, 230);
+  margin-top: 10%;
+  border: solid 1px  rgb(94, 2, 45);
+  border-radius: 5px;
+  padding: 10px;
+  text-align: center;
+}
+
+/*----- index/login Form ------*/
+.logo-box{
+  background-color:rgba(92, 3, 22, 0.5);
+  border: solid 1px rgb(43, 1, 10);
+  border-radius: 5px;
+  height: 350px;
+  width: 100%;
+}
+
+#input-field{
+width: 80%;
+height:38px;
+border-left: none;
+border: 1px solid rgba(92, 3, 22, 0.287); 
+border-radius:0 2px 2px 0;
+padding:0 0 0 6px;
+margin:3px 3px 3px 0;
+}
+
+#flaviblock{
+  background-color: rgb(163, 163, 163);
+  border: 1px solid rgb(92, 3, 22);
+  border-radius:2px 0 0 2px;
+  border-right: none;
+  padding: 2px 1px 1px 1px;
+  margin: 3px 0 3px 3px;
+}
+#icon-color{
+  color:rgb(112, 155, 12);
+}
+
+button.login {
+  background-color: rgb(151, 0, 71);
+  color: white;
+  height:40px;
+  border-radius: 3px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+span.password{
+  color: rgb(92, 3, 22);
+  display: inline-block;
+  margin-bottom: 4px;
+  margin-top: 8px;
+}
+#password-color{
+  color:rgb(112, 155, 12);
 }
