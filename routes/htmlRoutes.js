@@ -8,7 +8,7 @@ module.exports = function(app) {
 
   // Load admin dashboard page
   app.get("/admin", function(req, res) {
-      res.render("admin-dashboard");
+      res.render("dashboard");
    /* db.Example.findAll({}).then(function(dbExamples) {
       res.render("admin-dashboard", {
         msg: "admin-dashboard.handlebars ",

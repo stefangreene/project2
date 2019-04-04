@@ -1,0 +1,362 @@
+/*navigation and media responsive bootstrap elements*/
+html, body{
+    width: 100%;
+    height: 100%;
+  }
+@media screen and (max-width:2000px){
+.col-md-10-dash{
+    border: solid 1px rgb(247, 10, 207);
+    width:80%;
+}.col-md-2-dash{
+    border: solid 1px rgb(247, 10, 207);
+    width:20%;
+}
+/*tab menu font awesome and admin login*/
+.navbar{
+    background-color: cadetblue !important;
+    padding: 8px 0 0 8px !important;
+}
+#favicon{
+    color: rgb(166, 219, 42);
+    margin: 3px 5px 0 3px;
+}
+.nav-tabs{
+    border: solid 1px rgb(233, 233, 28);
+    border-bottom: solid 1px rgb(94, 2, 45);
+    width: 100%;
+    float: right;
+}
+#tab-style{
+    background-color: rgb(160, 158, 158);
+    border: solid 1px rgb(187, 185, 185);
+    border-radius: 8px 8px 0 0 !important;
+    width: 22%;
+}
+#tab-style.hover{
+    border-radius: 8px 8px 0 0 !important;
+    border-bottom-width: 0px;
+} 
+#tab-active-style{
+    border-radius: 8px 8px 0 0 !important;
+    width: 22%;
+}
+#tab-link{
+    color: rgb(226, 226, 226);
+    font-size: 17px;
+    font-weight: 600;
+}
+#tab-link.hover{
+    border-radius: 8px 8px 0 0 !important;
+    border-bottom-width: 0px;
+}
+#tab-active-link{
+    background-color: rgb(94, 2, 45);
+    border: solid 3px  rgb(94, 2, 45);
+    color: rgb(184, 182, 182);
+    font-size: 17px;
+    font-weight: 600;
+    border-radius: 8px 8px 0 0 !important;
+}
+.admin-login{
+    background-color: rgb(94, 2, 45);
+    border-bottom-style: none;
+    border: solid 1px rgb(94, 2, 45);
+    width: 100%;
+    padding:5px 0 0 5px;
+    border-radius: 4px 4px 0 0;
+
+}
+#login-dasboard{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 22px;
+    font-weight: 200;
+    font-kerning: auto;
+    line-height: 75%;
+    width:50%;
+}
+    
+/*data field for charts and other page information.*/
+.bg{
+    background-color: rgb(94, 2, 45);
+    border: solid 2px rgb(43, 1, 10);
+    height: 100%;
+    padding:1% 1% 1% 1%;
+  }
+#data-page{
+    background-color: rgb(228, 228, 228);
+    border: solid 2px rgb(43, 1, 10);
+    border-radius: 4px;
+    width: 100%;
+    height: 100%;
+}
+    
+    
+    
+    
+    
+}
+
+    
+    
+
+@media screen and (max-width:1400px){
+.col-md-10-dash{
+    width:80%;
+}.col-md-2-dash{
+    width: 20%;
+}
+
+/*tab menu font awesome and admin login*/
+.navbar{
+    background-color: cadetblue !important;
+    padding: 8px 0 0 8px !important;
+}
+#favicon{
+    color: rgb(166, 219, 42);
+    margin: 3px 5px 0 5px;
+    }
+.nav-tabs{
+    border: solid 1px rgb(233, 233, 28);
+    border-bottom: solid 1px rgb(94, 2, 45);
+    width: 100%;
+}
+#tab-style{
+    background-color: rgb(160, 158, 158);
+    border: solid 1px rgb(187, 185, 185);
+    border-radius: 8px 8px 0 0 !important;
+    width: 20%;
+}
+#tab-style.hover{
+    border-radius: 8px 8px 0 0 !important;
+    border-bottom-width: 0px;
+}
+#tab-active-style{
+    border-radius: 8px 8px 0 0 !important;
+    width: 20%;
+}
+#tab-link{
+    color: rgb(226, 226, 226);
+    font-size: 17px;
+    font-weight: 600;
+}
+#tab-link.hover{
+    border-radius: 8px 8px 0 0 !important;
+    border-bottom-width: 0px;
+}
+#tab-active-link{
+    background-color: rgb(94, 2, 45);
+    border: solid 3px  rgb(94, 2, 45);
+    color: rgb(184, 182, 182);
+    font-size: 17px;
+    font-weight: 600;
+    border-radius: 8px 8px 0 0 !important;
+}
+.admin-login{
+    background-color: rgb(94, 2, 45);
+    border-bottom-style: none;
+    border: solid 1px rgb(94, 2, 45);
+    width: 100%;
+    padding:5px 0 0 5px;
+    border-radius: 4px 4px 0 0;
+}
+#login-dasboard{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    font-weight: 150;
+    font-kerning: auto;
+    line-height: 75%;
+    width:50%;
+}
+    
+/*data field for charts and other page information.*/
+.bg{
+    background-color: rgb(94, 2, 45);
+    border: solid 2px rgb(43, 1, 10);
+    height: 100%;
+    padding:1% 1% 1% 1%;
+  }
+#data-page{
+    background-color: rgb(228, 228, 228);
+    border: solid 1px rgb(43, 1, 10);
+    border-radius: 4px;
+    width: 100%;
+    height: 100%;
+}
+    
+    
+    
+    
+    
+}
+
+
+
+
+
+@media screen and (max-width:900px){
+.col-md-10-dash{
+    width:70%;
+}.col-md-2-dash{
+    width: 30%;
+}
+/*tab menu font awesome and admin login*/
+.navbar{
+    background-color: cadetblue !important;
+    padding: 10px 0 0 10px !important;
+}
+#favicon{
+    color: rgb(166, 219, 42);
+    margin: 3px 5px 0 5px;
+}
+.navbar{
+    background-color: cadetblue !important;
+    padding: 10px 0 0 10px !important;
+}
+#favicon{
+    color: rgb(166, 219, 42);
+    margin: 3px 5px 0 5px;
+}
+.nav-tabs{
+    border: solid 1px rgb(233, 233, 28);
+    border-bottom: solid 1px rgb(94, 2, 45);
+}
+#tab-style{
+    background-color: rgb(160, 158, 158);
+    border: solid 1px rgb(187, 185, 185);
+    border-radius: 5% 5% 0 0 !important;
+}
+#tab-style.hover{
+    border-radius: 5% 5% 0 0 !important;
+}
+#tab-active-style{
+    border-radius: 5% 5% 0 0 !important;
+}
+#tab-link{
+    color: rgb(226, 226, 226);
+}
+#tab-active-link{
+    background-color: rgb(94, 2, 45);
+    border: solid 3px  rgb(94, 2, 45);
+    color: rgb(184, 182, 182);
+}
+.admin-login{
+    background-color: rgb(94, 2, 45);
+    border-bottom-style: none;
+    border: solid 1px rgb(94, 2, 45);
+    width: 100%;
+    padding:3px 0 0 3px;
+    border-radius: 4px 4px 0 0;
+}
+#login-dasboard{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: 100;
+    font-kerning: auto;
+    line-height: 65%;
+    width:40%;
+}
+    
+/*data field for charts and other page information.*/
+.bg{
+    background-color: rgb(94, 2, 45);
+    border: solid 2px rgb(43, 1, 10);
+    height: 100%;
+    padding:1% 1% 1% 1%;
+  }
+#data-page{
+    background-color: rgb(228, 228, 228);
+    border: solid 2px rgb(43, 1, 10);
+    border-radius: 6px;
+    width: 100%;
+    height: 100%;
+}
+    
+    
+    
+}
+
+
+
+@media screen and (max-width: 500px){
+/*....Dashboard page navigation bar.....*/
+.col-md-10-dash{
+    width: 65%;
+}.col-md-2-dash{
+    width: 35%;
+}
+/*tab menu font awesome and admin login*/
+.navbar{
+    background-color: cadetblue !important;
+    padding: 10px 0 0 10px !important;
+}
+#favicon{
+    color: rgb(166, 219, 42);
+    margin: 3px 5px 0 5px;
+}
+.nav-tabs{
+    border: solid 1px rgb(233, 233, 28);
+    border-bottom: solid 1px rgb(94, 2, 45);
+}
+#tab-style{
+    background-color: rgb(160, 158, 158);
+    border: solid 1px rgb(187, 185, 185);
+    border-radius: 5% 5% 0 0 !important;
+    display: block;
+}
+#tab-style.hover{
+    border-radius: 5% 5% 0 0 !important;
+}
+#tab-active-style{
+    border-radius: 5% 5% 0 0 !important;
+    display: block;
+}
+#tab-link{
+    color: rgb(226, 226, 226);
+}
+#tab-active-link{
+    background-color: rgb(94, 2, 45);
+    border: solid 3px  rgb(94, 2, 45);
+    color: rgb(184, 182, 182);
+
+}
+.admin-login{
+    background-color: rgb(94, 2, 45);
+    border-bottom-style: none;
+    border: solid 1px rgb(94, 2, 45);
+    width: 100%;
+    padding:1px 0 0 1px;
+    border-radius: 4px 4px 0 0;
+}
+#login-dasboard{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: 100;
+    font-kerning: auto;
+    line-height: 50%;
+    width:60%;
+}
+
+/*data field for charts and other page information.*/
+.bg{
+    background-color: rgb(94, 2, 45);
+    border: solid 2px rgb(43, 1, 10);
+    height: 100%;
+    padding:1% 1% 1% 1%;
+  }
+#data-page{
+    background-color: rgb(228, 228, 228);
+    border: solid 2px rgb(43, 1, 10);
+    border-radius: 6px;
+    width: 100%;
+    height: 100%;
+  }
+
+
+
+}
+
+
+
+
+
+
