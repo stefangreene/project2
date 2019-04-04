@@ -1,24 +1,30 @@
+<!--navbar row-->
 <div class="row-nav">
-  <nav class="navbar navbar-light bg-light">
 
-<div class="col-md-10-dash"> 
-<!--NavBar tabs-->
-  <ul class="nav nav-tabs" id="group-tab">
-    <!--left corner font awesome logo-->
-     <i class="fa fa-hacker-news fa-3x" aria-hidden="true" id="favicon"></i>
-    <li class="nav-item" id="tab-style">
-      <a class="nav-link" id="tab-link" href="/admin">Dashboard</a>
-    </li>
-    <li class="nav-item" id="tab-style">
-      <a class="nav-link" id="tab-link" href="/orders">Orders</a>
-    </li>
-    <li class="nav-item" id="tab-style">
-      <a class="nav-link" id="tab-link" href="/inventory">Inventory</a>
-    </li>
-    <li class="nav-item"id="tab-active-style">
-      <a class="nav-link active" id="tab-active-link" href="/accounts">Accounts</a>
-    </li>
-  </ul>
+<!--navbar collapse-->
+<div class="col-md-10-dash">
+  <nav class="navbar navbar-expand-md bg-dark navbar-light">
+    <a class="navbar-brand" href="#"><i class="fa fa-hacker-news fa-3x" aria-hidden="true" id="favicon"></i></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+    <ul class="nav nav-tabs" id="group-tab">
+      <li class="nav-item" id="tab-style">
+        <a class="nav-link" id="tab-link" href="/admin">Dashboard</a>
+      </li>
+      <li class="nav-item" id="tab-style">
+        <a class="nav-link" id="tab-link" href="/orders">Orders</a>
+      </li>
+      <li class="nav-item" id="tab-style">
+        <a class="nav-link" id="tab-link" href="/inventory">Inventory</a>
+      </li>
+      <li class="nav-item"id="tab-active-style">
+        <a class="nav-link active" id="tab-active-link" href="/accounts">Accounts</a>
+      </li>
+    </ul>
+  </div>  
+</nav><!--</nav>-->
 </div>
 
 <!--Admin LogIn-->
@@ -30,7 +36,6 @@
       </form>
     </div>
   </div>
-</nav>
 </div> <!--....end of navigation row for bootstrap columns.....-->
 
 
