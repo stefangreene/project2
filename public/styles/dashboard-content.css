@@ -4,46 +4,53 @@ html, body{
     height: 100%;
   }
 @media screen and (max-width:2000px){
-.col-md-10-dash{
-    border: solid 1px rgb(247, 10, 207);
+.col-md-10{
+    display:inline-flex;
+
+    padding: 0 !important;
     width:80%;
-}.col-md-2-dash{
-    border: solid 1px rgb(247, 10, 207);
+   
+}.col-md-2{
+    display:inline-flex;
+    padding: 0 !important;
     width:20%;
 }
 /*tab menu font awesome and admin login*/
-.navbar{
+#navigation{
     background-color: cadetblue !important;
-    padding: 8px 0 0 8px !important;
+    padding: 0 !important;
+    height: 50px;
 }
 #favicon{
     color: rgb(166, 219, 42);
-    margin: 3px 5px 0 3px;
 }
+
 .nav-tabs{
     border: solid 1px rgb(233, 233, 28);
     border-bottom: solid 1px rgb(94, 2, 45);
-    width: 100%;
-    float: right;
+    width: 90%;
+}
+li.nav-item{
+    display: inline-flex;
+    margin-right: 2px;
 }
 #tab-style{
     background-color: rgb(160, 158, 158);
     border: solid 1px rgb(187, 185, 185);
     border-radius: 8px 8px 0 0 !important;
-    width: 22%;
+    width: 20%;
 }
 #tab-style.hover{
     border-radius: 8px 8px 0 0 !important;
-    border-bottom-width: 0px;
-} 
+}
 #tab-active-style{
     border-radius: 8px 8px 0 0 !important;
-    width: 22%;
+    width: 20%;
 }
 #tab-link{
     color: rgb(226, 226, 226);
     font-size: 17px;
-    font-weight: 600;
+    font-weight: 300;
 }
 #tab-link.hover{
     border-radius: 8px 8px 0 0 !important;
@@ -54,7 +61,7 @@ html, body{
     border: solid 3px  rgb(94, 2, 45);
     color: rgb(184, 182, 182);
     font-size: 17px;
-    font-weight: 600;
+    font-weight: 300;
     border-radius: 8px 8px 0 0 !important;
 }
 .admin-login{
@@ -64,12 +71,11 @@ html, body{
     width: 100%;
     padding:5px 0 0 5px;
     border-radius: 4px 4px 0 0;
-
 }
 #login-dasboard{
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 22px;
-    font-weight: 200;
+    font-size: 18px;
+    font-weight: 150;
     font-kerning: auto;
     line-height: 75%;
     width:50%;
@@ -92,24 +98,32 @@ html, body{
     
     
     
-    
-    
 }
 
     
     
 
 @media screen and (max-width:1400px){
-.col-md-10-dash{
+.col-md-10{
+    display:inline-flex;
+    justify-content:space-between;
+    overflow: hidden;
+    padding: 0 !important;
+    border: solid 3px yellow;
     width:80%;
-}.col-md-2-dash{
+}.col-md-2{
+    display:inline-flex;
+    justify-content:space-between;
+    overflow: hidden;
+    padding: 0 !important;
+    border: solid 3px yellow;
     width: 20%;
 }
 
 /*tab menu font awesome and admin login*/
-.navbar{
+#navigation{
     background-color: cadetblue !important;
-    padding: 8px 0 0 8px !important;
+    padding: 0 !important;
 }
 #favicon{
     color: rgb(166, 219, 42);
@@ -118,7 +132,11 @@ html, body{
 .nav-tabs{
     border: solid 1px rgb(233, 233, 28);
     border-bottom: solid 1px rgb(94, 2, 45);
-    width: 100%;
+    width: 90%;
+}
+li.nav-item{
+    display: inline-flex;
+    margin-right: 2px;
 }
 #tab-style{
     background-color: rgb(160, 158, 158);
@@ -190,27 +208,29 @@ html, body{
 }
 
 
-
-
-
 @media screen and (max-width:900px){
-.col-md-10-dash{
+.col-md-10{
+    display:inline-flex;
+    justify-content:space-between;
+    overflow: hidden;
+    padding: 0 !important;
+
     width:70%;
-}.col-md-2-dash{
+}.col-md-2{
+    display:inline-flex;
+    justify-content:space-between;
+    overflow: hidden;
+    padding: 0 !important;
     width: 30%;
 }
 /*tab menu font awesome and admin login*/
-.navbar{
+#navigation{
     background-color: cadetblue !important;
-    padding: 10px 0 0 10px !important;
+    padding: 0 !important;
 }
 #favicon{
     color: rgb(166, 219, 42);
     margin: 3px 5px 0 5px;
-}
-.navbar{
-    background-color: cadetblue !important;
-    padding: 10px 0 0 10px !important;
 }
 #favicon{
     color: rgb(166, 219, 42);
@@ -219,6 +239,11 @@ html, body{
 .nav-tabs{
     border: solid 1px rgb(233, 233, 28);
     border-bottom: solid 1px rgb(94, 2, 45);
+    width: 90%;
+}
+li.nav-item{
+    display: inline-block;
+    margin-right: 2px;
 }
 #tab-style{
     background-color: rgb(160, 158, 158);
@@ -279,15 +304,25 @@ html, body{
 
 @media screen and (max-width: 500px){
 /*....Dashboard page navigation bar.....*/
-.col-md-10-dash{
-    width: 65%;
-}.col-md-2-dash{
-    width: 35%;
+.col-md-10{
+    justify-content:space-between;
+    overflow: hidden;
+    padding: 0 !important;
+    width: 100%;
+}.col-md-2{
+
+    justify-content:space-between;
+    overflow: hidden;
+    align-self: top;
+    padding: 0 !important;
+    width: 100%;
 }
 /*tab menu font awesome and admin login*/
-.navbar{
+#navigation{
+    display:flex;
+    flex-direction: column-reverse;
     background-color: cadetblue !important;
-    padding: 10px 0 0 10px !important;
+    padding: 0 !important;
 }
 #favicon{
     color: rgb(166, 219, 42);
@@ -296,19 +331,22 @@ html, body{
 .nav-tabs{
     border: solid 1px rgb(233, 233, 28);
     border-bottom: solid 1px rgb(94, 2, 45);
+    width: 90%;
+}
+li.nav-item{
+    display: block;
 }
 #tab-style{
     background-color: rgb(160, 158, 158);
     border: solid 1px rgb(187, 185, 185);
     border-radius: 5% 5% 0 0 !important;
-    display: block;
+    
 }
 #tab-style.hover{
     border-radius: 5% 5% 0 0 !important;
 }
 #tab-active-style{
     border-radius: 5% 5% 0 0 !important;
-    display: block;
 }
 #tab-link{
     color: rgb(226, 226, 226);

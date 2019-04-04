@@ -1,3 +1,34 @@
+//function to adjust the navbar to a flex column for the small screen dopdown menu
+$(window).resize(function() {
+  if (window.innerWidth < 500) {
+    $("#slider").removeAttr("style");
+  }
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//this the original code from the provided sites api call etc.....
+function SHRINKCODE(){
 // Get references to page elements
 var $exampleText = $("#example-text");
 var $exampleDescription = $("#example-description");
@@ -97,3 +128,4 @@ var handleDeleteBtnClick = function() {
 // Add event listeners to the submit and delete buttons
 $submitBtn.on("click", handleFormSubmit);
 $exampleList.on("click", ".delete", handleDeleteBtnClick);
+}
