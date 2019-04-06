@@ -1,48 +1,50 @@
-<div class= "login-background">
-<div class="container">
-<h2>{{msg}}</h2>
-<button type="btn"><a href="/admin">admin</a></button>
-<button type="btn"><a href="/orders">admin/orders</a></button>
-<button type="btn"><a href="/inventory">admin/inventory</a></button>
-<button type="btn"><a href="/accounts">admin/accounts</a></button>
-<div class="row">
+<div class="login-background">
+  <div class="container">
+    <h2>{{msg}}</h2>
+    <button type="btn"><a href="/admin">admin</a></button>
+    <button type="btn"><a href="/orders">admin/orders</a></button>
+    <button type="btn"><a href="/inventory">admin/inventory</a></button>
+    <button type="btn"><a href="/accounts">admin/accounts</a></button>
+    <div class="row">
 
-<!--........spacer column............-->
-<div class="col-sm-1 col-md-3 col-lg-4"></div>
+      <!--........spacer column............-->
+      <div class="col-sm-1 col-md-3 col-lg-4"></div>
 
-<!--........start of Form column............-->
-  <div class="col-sm-10 col-md-6 col-lg-4" id="login-background">  
-    <div class="logo-box"></div>
-<hr>
+      <!--........start of Form column............-->
+      <div class="col-sm-10 col-md-6 col-lg-4" id="login-background">
+        <div class="logo-box"></div>
+        <hr>
 
-<form class="clearfix" action="POST">
-    <div class="container">
-      
-<div class="input-group margin-bottom-sm">
-  <span id="flaviblock" class="input-group-addon"><i id="icon-color" class="fa fa-envelope-o fa-2x"></i></span>
-  <input id="input-field" class="form-control" type="text" placeholder="Email address">
-</div>
+        <form class="clearfix" id="signin" name="signin" method="post" action="signin">
+          <div class="container">
 
-<div class="input-group">
-  <span id="flaviblock" class="input-group-addon"><i id="icon-color" class="fa fa-key fa-2x"></i></span>
-  <input id="input-field" class="form-control" type="password" placeholder="Password">
-</div>
+            <div class="input-group margin-bottom-sm">
+              <span id="flaviblock" class="input-group-addon"><i id="icon-color"
+                  class="fa fa-envelope-o fa-2x"></i></span>
+              <input id="input-field" class="form-control" name="email" type="text" placeholder="Email address">
+            </div>
 
-      <button type="submit" class="login" id="login">Login</button>
-      </div>
-      <span class="new-user"><a id="new-usercss" href="#">New to Global Vine?</a></span>
-      <!--<div class="container" id="bottom-box" style="width:65%;background-color:#f1f1f1">
+            <div class="input-group">
+              <span id="flaviblock" class="input-group-addon"><i id="icon-color" class="fa fa-key fa-2x"></i></span>
+              <input id="input-field" class="form-control" name="password" type="password" placeholder="Password">
+            </div>
+
+            <button type="submit" class="login" id="login">Login</button>
+          </div>
+          <span class="new-user"><a id="new-usercss" href="/signup">New to Global Vine?</a></span>
+          <!--<div class="container" id="bottom-box" style="width:65%;background-color:#f1f1f1">
         <button type="button" class="register" id="regiter">Register</button>-->
-        
-      </div>
-    </form>
-  </div>
 
- <!--........spacer column............--> 
-<div class="col-sm-1 col-md-3 col-lg-4"></div>
+      </div>
+      </form>
     </div>
+
+    <!--........spacer column............-->
+    <div class="col-sm-1 col-md-3 col-lg-4"></div>
   </div>
-</div><!--......end of background........-->
+</div>
+</div>
+<!--......end of background........-->
 
 
 
