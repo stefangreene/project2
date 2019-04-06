@@ -1,19 +1,14 @@
 module.exports = function(app, passport) {
-  // app.get("/api/examples", function(req, res) {
-  //   db.Example.findAll({}).then(function(dbExamples) {
-  //     res.json(dbExamples);
-  //   });
-  // });
-
   app.get("/signup", function(req, res) {
     res.render("signup");
   });
+
   app.get("/signin", function(req, res) {
-    res.render("signin");
+    res.render("index");
   });
 
   app.post(
-    `/signup`,
+    "/signup",
     passport.authenticate(`local-signup`, {
       successRedirect: `/dashboard`,
       failurRedirect: `/signup`
@@ -28,9 +23,15 @@ module.exports = function(app, passport) {
     })
   );
     
-  app.get("/dashboard", isLoggedIn, authController.dashboard);
+  app.get("/dashboard", isLoggedIn, function(req, res) {
+    res.render("dashboard")
+  });
 
-  app.get("/logout", authController.logout);
+  app.get("/logout", function(req, res) {
+    req.session.destroy(function(err) {
+      res.redirect("/");
+    });
+  });
 
   function isLoggedIn(req, res, next) {
     if (req.isAuthenticated()) return next();

@@ -3,6 +3,12 @@ var express = require("express");
 var exphbs = require("express-handlebars");
 var path = require("path");
 
+// === dependencies for user authentication ===
+var cookieParser = require("cookie-parser");
+var passport = require("passport");
+var session = require("express-session");
+// =============================================
+
 var db = require("./models");
 
 var app = express();
@@ -16,10 +22,19 @@ app.use(express.static(path.join(__dirname, "/public")));
 
 // Handlebars
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
-
 app.set("view engine", "handlebars");
 
+// For Passport
+app.use(cookieParser());
+app.use(
+  session({ secret: "keyboard cat", resave: true, saveUninitialized: true })
+); // session secret
+app.use(passport.initialize());
+app.use(passport.session()); // persistent login sessions
+require("./config/passport/passport.js")(passport, db.user);
+
 // Routes
+require("./routes/authRoutes.js")(app, passport);
 require("./routes/apiRoutes")(app);
 require("./routes/htmlRoutes")(app);
 
