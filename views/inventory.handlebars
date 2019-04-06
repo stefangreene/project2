@@ -1,49 +1,75 @@
-<!--navbar row-->
-<div class="row-nav">
+<!--<div class= "bg">-->
+<!--<div class="container-fluid" style="border: solid 2px rgb(167, 255, 4);"-->
+<div class="container-fluid d-flex flex-wrap-reverse" style="border: solid 4px rgb(0, 255, 42);">
 
-<!--navbar collapse-->
-<div class="col-md-10-dash">
-  <nav class="navbar navbar-expand-md bg-dark navbar-light">
-    <a class="navbar-brand" href="#"><i class="fa fa-hacker-news fa-3x" aria-hidden="true" id="favicon"></i></a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-    <div class="collapse navbar-collapse" id="collapsibleNavbar">
-      <ul class="nav nav-tabs" id="group-tab">
-        <li class="nav-item" id="tab-style">
-          <a class="nav-link" id="tab-link" href="/admin">Dashboard</a>
-        </li>
-        <li class="nav-item" id="tab-style">
-          <a class="nav-link" id="tab-link" href="/orders">Orders</a>
-        </li>
-        <li class="nav-item" id="tab-active-style">
-          <a class="nav-link active" id="tab-active-link" href="/inventory">Inventory</a>
-        </li>
-        <li class="nav-item" id="tab-style">
-          <a class="nav-link" id="tab-link" href="/accounts">Accounts</a>
-        </li>
-      </ul>
-    </div>  
-  </nav><!--</nav>-->
-  </div>
-  
-<!--Admin LogIn-->
-  <div class="col-md-2-dash">
-    <div class="admin-login">
-      <form class="form-inline">
-      <button class="btn btn-dark btn-lg" type="submit">Log In</button>
-      <i class="fa fa-male fa-3x" aria-hidden="true" id="favicon"></i>
-      </form>
-    </div>
+
+<!--navbar collapse collapsible navbar-->
+<div class="col-sm-12 col-md-12 col-lg-8" style="border: solid 2px rgb(255, 60, 0);">
+  <nav class="navbar navbar-expand-md navbar-light bg-light">
+  <i class="fa fa-hacker-news fa-4x" aria-hidden="true" id="favicon"></i>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+  <ul class="nav nav-tabs nav-justified" style="width:100%;">
+      <li class="nav-item">
+        <a class="nav-link p-2" href="/admin">Dashboard</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link p2" href="/orders">Orders</a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link p2" href="/inventory">Your Cellar<span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link p2" href="/accounts">Clients</a>
+      </li>
+    </ul>
   </div>
 </nav>
+<br>
 </div>
 
+
+<!--profile and logout dropdown-->
+    <div class="col-sm-12 col-md-12 col-lg-4" style="border: solid 2px rgb(255, 60, 0); float:right;">
+      <div class="admin-login">
+          <div class="dropdown dropleft float-right">
+            <i class="fa fa-podcast fa-4x" aria-hidden="true" id="favicon"></i>
+        <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">Emmanuel</button>
+          <div class="dropdown-menu">
+          <a class="dropdown-item" href="#">Profile</a>
+          <a class="dropdown-item" href="/">Log Out</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
 <!--background and body container-->
-<div class= "bg">
-<div class="container-fluid" id="data-page"></div>
+<div class="container-fluid d-flex flex-wrap mt-2" style="display: block; overflow:auto; height:100%; align-items: start; color: rgb(87, 36, 59);;!important;" id="data-page">
 
+<!--Inventory Your Cellar-->
+<div class="card border-secondary m-3" style="min-width: 70rem; max-width: 70rem;">
+  <div class="card-header"><h3>Your Cellar</h3></div>
+  <div class="card-body text-secondary">
+    <h5 class="card-title" style="color:black"> Orders processing...</h5>
+    <p class="card-text">2 packaging.</br>5 shipping.</br>8 pending.</br</p>
+  </div>
+</div>
 
+<!--inventory orders shipping and reveiving.-->
+<div class="card border-secondary m-3" style="min-width: 25rem; max-width: 25rem;">
+  <div class="card-header"><h3>Shipping and Receiving</h3></div>
+  <div class="card-body text-secondary">
+    <h5 class="card-title" style="color:black">45 Total Cases</h5>
+
+  </div>
 </div>
 </div>
+
+
+
+
+
+
