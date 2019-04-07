@@ -10,7 +10,7 @@ module.exports = function(app, passport) {
   app.post(
     "/signup",
     passport.authenticate(`local-signup`, {
-      successRedirect: `/dashboard`,
+      successRedirect: `/admin`,
       failurRedirect: `/signup`
     })
   );
@@ -18,13 +18,17 @@ module.exports = function(app, passport) {
   app.post(
     "/signin",
     passport.authenticate("local-signin", {
-      successRedirect: "/dashboard",
+      successRedirect: "/admin",
       failureRedirect: "/signin"
     })
   );
     
-  app.get("/dashboard", isLoggedIn, function(req, res) {
-    res.render("dashboard")
+  app.get("/api/profile", isLoggedIn, function(req, res) {
+    res.json(req.user);
+  });
+
+  app.get("/profile", isLoggedIn, function(req, res) {
+    res.render("profile");
   });
 
   app.get("/logout", function(req, res) {
