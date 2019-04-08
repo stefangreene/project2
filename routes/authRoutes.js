@@ -53,10 +53,7 @@ module.exports = function(app, passport, user) {
       res.json(dbTodo);
     });
   });
-  
-  app.get("/dashboard", isLoggedIn, function(req, res) {
-    res.render("3dashboard")
-  });
+
 
   app.get("/logout", function(req, res) {
     req.session.destroy(function(err) {

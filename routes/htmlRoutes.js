@@ -11,19 +11,19 @@ module.exports = function(app) {
   });
 
   // Load admin dashboard page
-  app.get("/admin", function(req, res) {
+  app.get("/admin", isLoggedIn, function(req, res) {
     res.render("3dashboard");
   });
 
-  app.get("/mycellar", function(req, res) {
+  app.get("/mycellar", isLoggedIn, function(req, res) {
     res.render("4mycellar");
   });
 
-  app.get("/contacts", function(req, res) {
+  app.get("/contacts", isLoggedIn,  function(req, res) {
     res.render("5contacts");
   });
 
-  app.get("/orders", function(req, res) {
+  app.get("/orders", isLoggedIn, function(req, res) {
     res.render("6orders");
   });
 
@@ -31,4 +31,10 @@ module.exports = function(app) {
   app.get("*", function(req, res) {
     res.render("error");
   });
+
+  function isLoggedIn(req, res, next) {
+    if (req.isAuthenticated()) return next();
+
+    res.redirect("/signin");
+  }
 };
