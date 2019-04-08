@@ -1,0 +1,210 @@
+<!--Top Row for columns-->
+<div class="container-fluid d-flex flex-wrap-reverse">
+
+<!--favicon-->
+<div class="col-sm-12 col-md-12 col-lg-8 d-flex" id= "navigation-box">
+  <i class="fa fa-hacker-news fa-4x" aria-hidden="true" id="favicon"></i>
+
+<!--collapsible navigation-->
+  <div class="topnav" id="myTopnav">
+    <a href="/admin">Dashboard</a>
+    <a class="active">My Cellar</a>
+    <a href="/contacts">Contacts</a>
+    <a href="/orders">Orders</a>
+    <a href="javascript:void(0);" class="icon" onclick="collapsClick()">
+      <i class="fa fa-bars"></i>
+      </a>
+    </div>
+  <br>
+</div>
+
+<!--header column 2-->
+    <div class="col-sm-12 col-md-12 col-lg-4 d-flex flex-row-reverse">
+
+<!--profile and logout dropdown--> 
+  <div class="admin-login">
+    <div class="dropdown">
+      <button onclick="myFunction()" class="dropbtn">Username</button>
+          <div id="myDropdown" class="dropdown-content">
+            <a href="#home">Profile</a>
+            <a href="#about">News Feed</a>
+            <a href="/">Log Out</a>
+          </div>
+      </div>
+<!--User logo......Favicon-->
+  <div class="userLogo"><i class="fa fa-user-circle fa-3x" aria-hidden="true" id="favicon"></i></div>
+  <div class="logoutBumper"></div>
+    </div>  
+  </div>
+</div>
+
+    
+<!--background and body container dashboard contents-->
+<div class="container-fluid d-flex flex-wrap" id="data-page">
+<!--orders chart Shipping-->
+<div class="card border-secondary m-3" style="min-width: 80rem; max-width: 80rem;">
+  <div class="card-header"><h3>My Cellar</h3></div>
+  <div class="card-body text-secondary">
+    <h5 class="card-title" style="color:black">Inventory Status.</h5>
+    <form class="form">
+  <label class="sr-only" for="cellar-search">Search your Cellar</label>
+  <input type="text" class="form-control mb-1 mr-sm-1" id="form-cellar-search" placeholder="Search your Wine.."></form>
+
+
+<!--My Cellar Table....--> 
+<table class="table table-striped">
+  <thead>
+
+<!--Search your Wine....-->
+<th scope="col">
+  <form class="form"><label class="sr-only" for="index-search">index</label>
+    <input type="number" class="form-control mb-1 mr-sm-1" id="index-search" placeholder="#"></form></th>
+
+<th scope="col">
+  <form class="form"><label class="sr-only" for="index-search">Name</label>
+    <input type="text" class="form-control mb-1 mr-sm-1" id="name-search" placeholder="search"></form></th>
+
+<th scope="col">
+  <form class="form"><label class="sr-only" for="index-search">Variety</label>
+    <input type="text" class="form-control mb-1 mr-sm-1" id="variety-search" placeholder="search"></form></th>
+
+<th scope="col">
+  <form class="form"><label class="sr-only" for="vintage-search">Vintage</label>
+    <input type="number" class="form-control mb-1 mr-sm-1" id="vintage-search" placeholder="search"></form></th>
+
+<th scope="col">
+  <form class="form"><label class="sr-only" for="index-search">index</label>
+      <input type="number" class="form-control mb-1 mr-sm-1" id="index-search" placeholder="#"></form></th>
+
+<th scope="col">
+  <form class="form"><label class="sr-only" for="index-search">index</label>
+    <input type="number" class="form-control mb-1 mr-sm-1" id="index-search" placeholder="#"></form></th>
+          
+<th scope="col">
+  <form class="form"><label class="sr-only" for="index-search">index</label>
+    <input type="number" class="form-control mb-1 mr-sm-1" id="index-search" placeholder="#"></form></th>
+
+<th scope="col">
+  <form class="form"><label class="sr-only" for="index-search">index</label>
+    <input type="" class="form-control mb-1 mr-sm-1" id="index-search" placeholder="#"></form></th>
+
+<th scope="col">
+  <form class="form"><label class="sr-only" for="index-search">index</label>
+    <input type="number" class="form-control mb-1 mr-sm-1" id="index-search" placeholder="#"></form></th>
+
+
+<!--Titles....-->
+  <tr>
+    <th scope="col">#</th>
+      <th scope="col">Wine Name</th>
+      <th scope="col">Variety</th>
+      <th scope="col">Vintage</th>
+      <th scope="col">Type</th>
+      <th scope="col">Country</th>
+      <th scope="col">Qty</th>
+      <th scope="col">Price</th>
+      <th scope="col"># Sell</th>
+      <th scope="col">Search</th>
+    </tr>
+  </thead>
+  
+<!--Rows....-->
+<tbody>
+  <tr>
+     <th scope="row">1</th>
+        <td>Big Red</td>
+        <td>Merlot</td>
+        <td>1997</td>
+        <td>Dinner</td>
+        <td>France</td>
+        <td>3 cases</td>
+        <td>$250.00 p/c</td>
+        <td>All</td>
+        <td>
+          <div class="btn-group">
+            <button type="editWine" class="btn btn-danger mr-1">Edit</button>
+            <button type="deleteWine" class="btn btn-danger mr-1">Delete</button>
+          </div>
+        </td>
+    </tr>
+<!--------------------------------------------------------->
+  <tr>
+     <th scope="row">2</th>
+       <td>Little White</td>
+        <td>Pinot Grigio</td>
+        <td>2017</td>
+        <td>Dinner</td>
+        <td>Australia</td>
+        <td>4 Cases</td>
+        <td>$175.00 p/c</td>
+        <td>All</td>
+      <td>
+          <div class="btn-group">
+            <button type="editWine" class="btn btn-danger mr-1">Edit</button>
+            <button type="deleteWine" class="btn btn-danger mr-1">Delete</button>
+          </div>
+        </td>
+      </tr>
+<!--------------------------------------------------------->
+
+<tr>
+     <th scope="row">3</th>
+        <td>Yellow Tail</td>
+        <td>Bordeaux</td>
+        <td>2019</td>
+        <td>Dinner</td>
+        <td>USA</td>
+        <td>7 Cases</td>
+        <td>$135.00 p/c</td>
+        <td>All</td>
+        <td>
+          <div class="btn-group">
+            <button type="editWine" class="btn btn-danger mr-1">Edit</button>
+            <button type="deleteWine" class="btn btn-danger mr-1">Delete</button>
+          </div>
+        </td>
+    </tr>
+<!--------------------------------------------------------->
+  <tr>
+     <th scope="row">4</th>
+        <td>Blue Ribbon</td>
+        <td>Temoprranillo</td>
+        <td>2016</td>
+        <td>Dinner</td>
+        <td>Spain</td>
+        <td>5 Cases</td>
+        <td>$220.00 p/c</td>
+        <td>All</td>
+      <td>
+          <div class="btn-group">
+            <button type="editWine" class="btn btn-danger mr-1">Edit</button>
+            <button type="deleteWine" class="btn btn-danger mr-1">Delete</button>
+          </div>
+        </td>
+      </tr>
+<!--------------------------------------------------------->
+   
+      </tbody>
+    </table>
+  </div>
+ <div class="card-footer clear-fix">Edit your inventory! <button type="button" class="btn btn-danger float-right"><a href="">Add More Wine!</a></button></div>
+</div>
+
+</div>
+
+<script>
+function collapsClick() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+</script>
+
+
+
+
+
+

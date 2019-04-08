@@ -1,10 +1,10 @@
 module.exports = function(app, passport) {
   app.get("/signup", function(req, res) {
-    res.render("signup");
+    res.render("2signup");
   });
 
   app.get("/signin", function(req, res) {
-    res.render("index");
+    res.render("1index");
   });
 
   app.post(
@@ -24,7 +24,7 @@ module.exports = function(app, passport) {
   );
     
   app.get("/dashboard", isLoggedIn, function(req, res) {
-    res.render("dashboard")
+    res.render("3dashboard")
   });
 
   app.get("/logout", function(req, res) {
