@@ -26,10 +26,9 @@
     <div class="dropdown">
       <button onclick="myFunction()" class="dropbtn">Username</button>
           <div id="myDropdown" class="dropdown-content">
-            {{!-- Button to test the modal triggering --}}
-            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#profileUpdateModal">Modal Testing</button>
-            <a href="#about">News Feed</a>
-            <a href="/logout">Log Out</a>
+            <button type="button" class="btn btn-light w-100" data-toggle="modal" data-target="#profileUpdateModal">Profile</button>
+            <a class="btn btn-light w-100" href="/admin">News Feed</a>
+            <a class="btn btn-light w-100" href="/logout">Log Out</a>
           </div>
       </div>
 <!--User logo......Favicon-->
@@ -210,6 +209,7 @@
     </div>
   </div>
 </div>
+{{!-- End of the profile modal --}}
 
 <script>
 function collapsClick() {
@@ -220,6 +220,106 @@ function collapsClick() {
     x.className = "topnav";
   }
 }
+
+  // ========== USER PROFILE UPDATE CODE =================
+  $(document).ready(function () {
+    const modalTitleEl = $("#profileUpdateModalTitle");
+    const modalBodyEl = $("#profileUpdateModalBody");
+
+    const firstNameInput = $("#firstNameInput");
+    const firstNameUpdateBtn = $("#firstNameUpdate");
+
+    const lastNameInput = $("#lastNameInput");
+    const lastNameUpdateBtn = $("#lastNameUpdate");
+
+    const emailInput = $("#emailInput");
+    const emailUpdateBtn = $("#emailUpdate");
+
+    refresh();
+
+    $(firstNameUpdateBtn).click(function () {
+      const myUpdate = $(firstNameInput).val();
+      if (myUpdate) {
+        $.ajax({
+          url: '/api/profile',
+          type: 'post',
+          data: {
+            firstname: myUpdate,
+          },
+          success: function (data, textStatus, jQxhr) {
+            refresh();
+          },
+          error: function (jqXhr, textStatus, errorThrown) {
+            console.log(errorThrown);
+          }
+        });
+      } else {
+        alert("Please input a value to update");
+      }
+    });
+
+    $(lastNameUpdateBtn).click(function () {
+      const myUpdate = $(lastNameInput).val();
+      if (myUpdate) {
+        $.ajax({
+          url: '/api/profile',
+          type: 'post',
+          data: {
+            lastname: myUpdate,
+          },
+          success: function (data, textStatus, jQxhr) {
+            refresh();
+          },
+          error: function (jqXhr, textStatus, errorThrown) {
+            console.log(errorThrown);
+          }
+        });
+      } else {
+        alert("Please input a value to update");
+      }
+    });
+
+    $(emailUpdateBtn).click(function () {
+      const myUpdate = $(emailInput).val();
+      if (myUpdate) {
+        $.ajax({
+          url: '/api/profile',
+          type: 'post',
+          data: {
+            email: myUpdate,
+          },
+          success: function (data, textStatus, jQxhr) {
+            refresh();
+          },
+          error: function (jqXhr, textStatus, errorThrown) {
+            console.log(errorThrown);
+          }
+        });
+      } else {
+        alert("Please input a value to update");
+      }
+    });
+
+  }); // closes the .ready(function() {
+
+  let refresh = function () {
+    $(firstNameInput).val("");
+    $(lastNameInput).val("");
+    $(emailInput).val("");
+
+    $.ajax({
+      url: "api/profile",
+      type: "GET"
+    }).then(function (result) {
+      console.log(result);
+      $(firstNameInput).attr("placeholder", result.firstname);
+      $(lastNameInput).attr("placeholder", result.lastname);
+      $(emailInput).attr("placeholder", result.email);
+
+    });
+  };
+  // ========== END OF USER PROFILE UPDATE CODE =================
+
 </script>
 
 
