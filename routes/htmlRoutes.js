@@ -5,11 +5,7 @@ module.exports = function(app) {
   app.get("/", function(req, res) {
     res.render("1index");
   });
-
-  app.get("/signup", function(req, res) {
-    res.render("2signup");
-  });
-
+  
   // Load admin dashboard page
   app.get("/admin", isLoggedIn, function(req, res) {
     res.render("3dashboard");

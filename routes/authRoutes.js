@@ -29,10 +29,6 @@ module.exports = function(app, passport, user) {
     res.json(req.user);
   });
 
-  app.get("/profile", isLoggedIn, function(req, res) {
-    res.render("profile");
-  });
-
   app.post("/api/profile", isLoggedIn, function(req, res) {
     var update = {};
     if(req.body.firstname) {
