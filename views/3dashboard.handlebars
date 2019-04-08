@@ -1,54 +1,46 @@
-<!--<div class= "bg">-->
-<!--<div class="container-fluid" style="border: solid 2px rgb(167, 255, 4);"-->
-<div class="container-fluid d-flex flex-wrap-reverse" style="border: solid 4px rgb(0, 255, 42);">
+<!--Top Row for columns-->
+<div class="container-fluid d-flex flex-wrap-reverse">
 
-
-<!--navbar collapse collapsible navbar-->
-<div class="col-sm-12 col-md-12 col-lg-8" style="border: solid 2px rgb(255, 60, 0);">
-  <nav class="navbar navbar-expand-md navbar-light bg-light">
+<!--favicon-->
+<div class="col-sm-12 col-md-12 col-lg-8 d-flex" id= "navigation-box">
   <i class="fa fa-hacker-news fa-4x" aria-hidden="true" id="favicon"></i>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNav">
-    <ul class="nav nav-tabs nav-justified" style="width:100%;">
-      <li class="nav-item active">
-        <a class="nav-link" href="/admin">Dashboard<span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/orders">Orders</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/inventory">Your Cellar</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/accounts">Clients</a>
-      </li>
-    </ul>
-  </div>
-</nav>
-<br>
+
+<!--collapsible navigation-->
+  <div class="topnav" id="myTopnav">
+    <a class="active">Dashboard</a>
+    <a href="/mycellar">My Cellar</a>
+    <a href="/contacts">Contacts</a>
+    <a href="/orders">Orders</a>
+    <a href="javascript:void(0);" class="icon" onclick="collapsClick()">
+      <i class="fa fa-bars"></i>
+      </a>
+    </div>
+  <br>
 </div>
 
-<!--profile and logout dropdown-->
-    <div class="col-sm-12 col-md-12 col-lg-4" style="border: solid 2px rgb(255, 60, 0); float:right;">
-      <div class="admin-login">
-          <div class="dropdown dropleft float-right">
-            <i class="fa fa-podcast fa-4x" aria-hidden="true" id="favicon"></i>
-        <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">Emmanuel</button>
-          <div class="dropdown-menu">
-          <a class="dropdown-item" href="#">Profile</a>
-          <a class="dropdown-item" href="/">Log Out</a>
-        </div>
-      </div>
-    </div>
-  </div>
+<!--header column 2-->
+    <div class="col-sm-12 col-md-12 col-lg-4 d-flex flex-row-reverse">
 
+<!--profile and logout dropdown--> 
+  <div class="admin-login">
+    <div class="dropdown">
+      <button onclick="myFunction()" class="dropbtn">Username</button>
+          <div id="myDropdown" class="dropdown-content">
+            <a href="#home">Profile</a>
+            <a href="#about">News Feed</a>
+            <a href="/">Log Out</a>
+          </div>
+      </div>
+<!--User logo......Favicon-->
+  <div class="userLogo"><i class="fa fa-user-circle fa-3x" aria-hidden="true" id="favicon"></i></div>
+  <div class="logoutBumper"></div>
+    </div>  
+  </div>
 </div>
 
     
 <!--background and body container dashboard contents-->
-<div class="container-fluid d-flex flex-wrap mt-2" style="display: block; overflow:auto; height:100%; align-items: start; color: rgb(87, 36, 59)!important;" id="data-page">
+<div class="container-fluid d-flex flex-wrap" id="data-page">
 
 <!--Dashboard contacts chart-->
 <div class="card border-secondary m-3" style="min-width: 35rem; max-width: 35rem;">
@@ -180,7 +172,16 @@
 
 </div>
 
-
+<script>
+function collapsClick() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+</script>
 
 
 
