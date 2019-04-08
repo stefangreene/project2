@@ -1,4 +1,6 @@
-module.exports = function(app, passport) {
+module.exports = function(app, passport, user) {
+  var User = user;
+
   app.get("/signup", function(req, res) {
     res.render("2signup");
   });
@@ -29,6 +31,27 @@ module.exports = function(app, passport) {
 
   app.get("/profile", isLoggedIn, function(req, res) {
     res.render("profile");
+  });
+
+  app.post("/api/profile", isLoggedIn, function(req, res) {
+    var update = {};
+    if(req.body.firstname) {
+      update.firstname = req.body.firstname;
+    }
+    if(req.body.lastname) {
+      update.lastname = req.body.lastname;
+    }
+    if(req.body.email) {
+      update.email = req.body.email;
+    }
+    User.update(update, {
+      where: {
+        id: req.user.id
+      }
+    }).then(function(dbTodo) {
+      console.log("success");
+      res.json(dbTodo);
+    });
   });
   
   app.get("/dashboard", isLoggedIn, function(req, res) {
