@@ -1,10 +1,6 @@
 module.exports = function(app, passport, user) {
   var User = user;
 
-  app.get("/signup", function(req, res) {
-    res.render("2signup");
-  });
-
   app.get("/signin", function(req, res) {
     res.render("1index");
   });
