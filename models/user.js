@@ -20,8 +20,8 @@ module.exports = function(sequelize, Sequelize) {
       type: Sequelize.TEXT
     },
 
-    about: {
-      type: Sequelize.TEXT
+    sellerID: {
+      type: Sequelize.STRING
     },
 
     email: {
@@ -31,13 +31,29 @@ module.exports = function(sequelize, Sequelize) {
       }
     },
 
+    address: {
+      type: Sequelize.STRING,
+      allowNull: true
+    },
+
+    postal: {
+      type: Sequelize.INTEGER
+    },
+
+    country: {
+      type: Sequelize.STRING
+    },
+
     password: {
       type: Sequelize.STRING,
       allowNull: false
     },
 
-    last_login: {
+    lastLogin: {
       type: Sequelize.DATE
+    },
+    userToken: {
+      type: Sequelize.TEXT
     },
 
     status: {
