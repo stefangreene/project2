@@ -1,7 +1,5 @@
-module.exports = function(app, passport) {
-  app.get("/signup", function(req, res) {
-    res.render("2signup");
-  });
+module.exports = function(app, passport, user) {
+  var User = user;
 
   app.get("/signin", function(req, res) {
     res.render("1index");
@@ -10,7 +8,7 @@ module.exports = function(app, passport) {
   app.post(
     "/signup",
     passport.authenticate(`local-signup`, {
-      successRedirect: `/dashboard`,
+      successRedirect: `/admin`,
       failurRedirect: `/signup`
     })
   );
@@ -18,14 +16,36 @@ module.exports = function(app, passport) {
   app.post(
     "/signin",
     passport.authenticate("local-signin", {
-      successRedirect: "/dashboard",
+      successRedirect: "/admin",
       failureRedirect: "/signin"
     })
   );
     
-  app.get("/dashboard", isLoggedIn, function(req, res) {
-    res.render("3dashboard")
+  app.get("/api/profile", isLoggedIn, function(req, res) {
+    res.json(req.user);
   });
+
+  app.post("/api/profile", isLoggedIn, function(req, res) {
+    var update = {};
+    if(req.body.firstname) {
+      update.firstname = req.body.firstname;
+    }
+    if(req.body.lastname) {
+      update.lastname = req.body.lastname;
+    }
+    if(req.body.email) {
+      update.email = req.body.email;
+    }
+    User.update(update, {
+      where: {
+        id: req.user.id
+      }
+    }).then(function(dbTodo) {
+      console.log("success");
+      res.json(dbTodo);
+    });
+  });
+
 
   app.get("/logout", function(req, res) {
     req.session.destroy(function(err) {
