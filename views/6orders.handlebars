@@ -109,26 +109,35 @@
   <div class="card-body text-secondary">
     <h5 class="card-title" style="color:black"></h5>
 <form>
-  <div class="form-check form-check-inline">
-  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-  <label class="form-check-label" for="inlineRadio1">Buy</label>
-</div>
-<div class="form-check form-check-inline">
-  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-  <label class="form-check-label" for="inlineRadio2">Sell</label>
-</div>
+
+    <div class="form-group">
+    <input type="string" class="form-control" id="sellerID" aria-describedby="sellerID" placeholder="sellerID">
+    <small id="sellerID" class="form-text text-muted">Customer ID:</small>
+  </div>
+
   <div class="form-group">
-    <label for="exampleInputEmail1"></label>
-    <input type="name" class="form-control" id="wine-type" aria-describedby="wine-type" placeholder="Merlot">
+    <input type="text" class="form-control" id="wine-variety" aria-describedby="wine-variety" placeholder="dropdown">
+    <small id="wineVariety" class="form-text text-muted">Variety</small>
+  </div>
+
+  <div class="form-group">
+    <input type="text" class="form-control" id="wine-type" aria-describedby="wine-type" placeholder="dropdown">
     <small id="wineType" class="form-text text-muted">Name of Wine</small>
   </div>
+
   <div class="form-group">
-    <label for="order-quantity">Order Quantity</label>
-    <input type="quantity" class="form-control" id="order-quantity" placeholder="# of Cases">
+    <input type="number" class="form-control" id="order-quantity" placeholder="# of Cases">
+    <small id="quantity" class="form-text text-muted">Quantity</small>
   </div>
-  <div class="form-check">
-    <input type="checkbox" class="form-check-input" id="request-info">
-    <label class="form-check-label" for="mailing-list">Join the mailing list!</label>
+
+   <div class="form-group">
+    <input type="number" class="form-control" id="unit-price" placeholder="Unit Price">
+    <small id="quantity" class="form-text text-muted">Unit Price</small>
+  </div>
+
+  <div class="form-group">
+    <input type="number" class="form-control" id="order-price" placeholder="Total Price">
+    <small id="quantity" class="form-text text-muted">Total Price</small>
   </div>
   <button type="submit" class="btn btn-primary">Submit</button>
 </form>

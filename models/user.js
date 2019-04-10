@@ -20,9 +20,9 @@ module.exports = function(sequelize, Sequelize) {
       type: Sequelize.TEXT
     },
 
-    sellerID: {
-      type: Sequelize.STRING
-    },
+    //sellerID: {
+     //type: Sequelize.STRING
+    //},
 
     email: {
       type: Sequelize.STRING,
@@ -31,30 +31,30 @@ module.exports = function(sequelize, Sequelize) {
       }
     },
 
-    address: {
-      type: Sequelize.STRING,
-      allowNull: true
-    },
+    //address: {
+     // type: Sequelize.STRING,
+     // allowNull: true
+    //},
 
-    postal: {
-      type: Sequelize.INTEGER
-    },
+    //postal: {
+     // type: Sequelize.INTEGER
+   // },
 
-    country: {
-      type: Sequelize.STRING
-    },
+    //country: {
+     // type: Sequelize.STRING
+   // },
 
     password: {
       type: Sequelize.STRING,
       allowNull: false
     },
 
-    lastLogin: {
-      type: Sequelize.DATE
-    },
-    userToken: {
-      type: Sequelize.TEXT
-    },
+    //lastLogin: {
+    //  type: Sequelize.DATE
+    //},
+   // userToken: {
+      //type: Sequelize.TEXT
+   // },
 
     status: {
       type: Sequelize.ENUM("active", "inactive"),

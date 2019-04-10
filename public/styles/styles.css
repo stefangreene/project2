@@ -4,62 +4,84 @@ html, body{
 }
 /*----- index/login screen background divs ------*/
 
-.login-background{
-  background-color: rgb(94, 2, 45);
-  border: solid 6px rgb(94, 2, 45);
+.container-fluid-img{
+  background-image: url("/images/index-page/globalVine_frontpage.jpg");
   height: 100%;
-  padding:2% 1% 1% 1%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
 }
 
 #login-background{
   height:40%;
-  background-color: rgb(230, 230, 230);
-  margin-top: 10%;
-  border: solid 1px  rgb(94, 2, 45);
+  margin-top: 20%;
+  border: solid;
+  border-color: rgb(255, 0, 0);
+  border-width:1px;
+  padding: 0 3px 3px 3px;
   border-radius: 5px;
-  padding: 10px;
   text-align: center;
 }
 
 /*----- index/login Form ------*/
 .logo-box{
-  background-color:rgba(92, 3, 22, 0.5);
-  border: solid 1px rgb(43, 1, 10);
+  margin:5px;
+  background-color:rgb(201, 198, 198);
+  border: solid 1px rgb(112, 112, 112);
+  box-shadow: 0 4px 9px 5px rgba(0, 0, 0, 0.24), 0 6px 20px 5px rgba(0, 0, 0, 0.253);
   border-radius: 5px;
-  height: 350px;
-  width: 100%;
+  height: 14px;
+  width: 98%;
+  align-self: center;
+}
+div.container{
+  padding:0 2px 2px 2px !important;
+  display: block;
+  align-content: center;
+}
+div.text{
+  font-family: Arial, Helvetica, sans-serif;
+  background-color:  rgb(170, 169, 169);
+  color: rgb(0, 0, 0);
+  border-radius: 4px;
+  font-size: 55px;
+  padding:0;
+  margin-top:5px;
+  line-height: 20px;
 }
 
+.signup-box{
+
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 5px;
+  align-self: center;
+  width: 80%;
+}
+div.input-group{
+  margin-left:8px !important;
+  border:solid 2px rgb(201, 198, 198);
+  width:95%;
+}
 #input-field{
 width: 80%;
 height:38px;
 border-left: none;
 border: 1px solid rgba(92, 3, 22, 0.287); 
-border-radius:0 2px 2px 0;
 padding:0 0 0 6px;
-margin:3px 3px 3px 0;
-}
-
-#flaviblock{
-  background-color: rgb(163, 163, 163);
-  border: 1px solid rgb(92, 3, 22);
-  border-radius:2px 0 0 2px;
-  border-right: none;
-  padding: 2px 1px 1px 1px;
-  margin: 3px 0 3px 3px;
-}
-#icon-color{
-  color:rgb(112, 155, 12);
+align-self: center;
 }
 
 button.login {
-  background-color: rgb(151, 0, 71);
-  color: white;
+  background-color: rgb(105, 1, 50);
+  color: white !important;
   height:40px;
-  border-radius: 3px;
+  margin:8px 3px 3px 3px !important;
+  border-radius: 5px;
   border: none;
   cursor: pointer;
-  width: 100%;
+  width: 80%;
+  
 }
 
 button:hover {
