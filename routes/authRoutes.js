@@ -36,6 +36,9 @@ module.exports = function(app, passport, user) {
     if(req.body.email) {
       update.email = req.body.email;
     }
+    if(req.body.profileUrl) {
+      update.profileUrl = req.body.profileUrl;
+    }
     User.update(update, {
       where: {
         id: req.user.id
