@@ -243,6 +243,10 @@
       </div>
       <div class="modal-body" id="profileUpdateModalBody">
 
+        <img id="profilePic" class="rounded-circle my-2 mx-auto" style="width: 100px; height: 100px"
+          src="/images/default-profile.jpg">
+        <br>
+
         {{!-- First Name --}}
         <label for="firstNameInput">First Name: </label>
         <input id="firstNameInput" name="firstNameInput" type="text" />
@@ -261,6 +265,12 @@
         <button id="emailUpdate" class="btn btn-primary btn-sm">Update</button>
         <br>
 
+        {{!-- User Profile Picture link --}}
+        <label for="profilePicUrl">Profile Picture Url: </label>
+        <input id="profilePicInput" name="profilePicUrl" type="text" />
+        <button id="profilePicUpdate" class="btn btn-primary btn-sm">Update</button>
+        <br>
+
         {{!-- password update --}}
 
       </div>
@@ -272,6 +282,7 @@
 </div>
 {{!-- End of the profile modal --}}
 
+
 <script>
 function collapsClick() {
   var x = document.getElementById("myTopnav");
@@ -281,7 +292,7 @@ function collapsClick() {
     x.className = "topnav";
   }
 }
- // ========== USER PROFILE UPDATE CODE =================
+  // ========== USER PROFILE UPDATE CODE =================
   $(document).ready(function () {
     const modalTitleEl = $("#profileUpdateModalTitle");
     const modalBodyEl = $("#profileUpdateModalBody");
@@ -294,6 +305,10 @@ function collapsClick() {
 
     const emailInput = $("#emailInput");
     const emailUpdateBtn = $("#emailUpdate");
+
+    const profilePicInput = $("#profilePicInput");
+    const profilePicUpdateBtn = $("#profilePicUpdate");
+    const profilePicImg = $("#profilePic");
 
     refresh();
 
@@ -360,23 +375,53 @@ function collapsClick() {
       }
     });
 
+    $(profilePicUpdateBtn).click(function () {
+      const myUpdate = $(profilePicInput).val();
+      if (myUpdate) {
+        $.ajax({
+          url: '/api/profile',
+          type: 'post',
+          data: {
+            profileUrl: myUpdate,
+          },
+          success: function (data, textStatus, jQxhr) {
+            refresh();
+          },
+          error: function (jqXhr, textStatus, errorThrown) {
+            console.log(errorThrown);
+          }
+        });
+      } else {
+        alert("Please input a value to update");
+      }
+    });
+
   }); // closes the .ready(function() {
 
   let refresh = function () {
     $(firstNameInput).val("");
     $(lastNameInput).val("");
     $(emailInput).val("");
+    $(profilePicInput).val("");
 
     $.ajax({
       url: "api/profile",
       type: "GET"
     }).then(function (result) {
-      console.log(result);
+      // console.log(result);
       $(firstNameInput).attr("placeholder", result.firstname);
       $(lastNameInput).attr("placeholder", result.lastname);
       $(emailInput).attr("placeholder", result.email);
-
+      if (result.profileUrl) {
+        $(profilePicInput).attr("placeholder", result.profileUrl);
+        $("#profilePic").attr("src", result.profileUrl);
+      } else {
+        $(profilePicInput).attr("placeholder", "Add a picture url!");
+        $("#profilePic").attr("src", "/images/default-profile.jpg");
+      }
     });
   };
+
+
   // ========== END OF USER PROFILE UPDATE CODE =================
 </script>
