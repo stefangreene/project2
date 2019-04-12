@@ -17,7 +17,7 @@ module.exports = function(sequelize, Sequelize) {
     },
 
     profileUrl: {
-      type: Sequelize.STRING,
+      type: Sequelize.STRING
     },
 
     email: {
