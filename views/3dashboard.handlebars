@@ -33,8 +33,7 @@
         </div>
       </div>
       <!--User logo......Favicon-->
-      <div class="userLogo"><i class="fa fa-user-circle fa-3x" aria-hidden="true" id="favicon"></i></div>
-      <div class="logoutBumper"></div>
+      <div class="userLogo"><i class="fa fa-user-circle fa-4x" aria-hidden="true" id="favicon"></i></div>
     </div>
   </div>
 </div>
@@ -43,85 +42,51 @@
 
 <!--background and body container dashboard contents-->
 <div class="container-fluid" id="data-page">
-  <div class="row d-flex flex-wrap">
-    <div class="col-lg-2 col-md-2 hidden-sm hidden-xs" style="border:solid 2px yellow"></div>
-    <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12"
-      style="border:solid 2px yellow; padding:0!important; align-self:center;" id="scrollable">
+    <div class="row d-flex flex-wrap">
+      <div class="col-lg-1 hidden-md hidden-sm hidden-xs"></div>
+        <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12" id="scrollable">
 
 
-      <div class="col-md-12" style="border:solid 2px red; height:800px; border-radius:6px;">
-        <label style="margin-left:5px;">
-          <h2>Maybe Make A Post</h2><input type="text" placeholder="Post"><button class="btn btn-success btn-sm"
-            style="float-right">submit!</button>
-        </label>
-        <div class="news-card-box d-flex flex-column justify-content-center"
-          style="border:solid 2px red; padding-top:10px; height:690px;overflow-y: scroll;">
+<div class="col-md-12 mt-3" id="news-feed-container">
+  <label id="post"><h2>Maybe Make A Post</h2><input type="text" placeholder="Post">
+      <button class="btn btn-success btn-sm" id="post-submit">submit!</button>
+    </label>
+    
+<!--Scrollable box for news feed-->
+<div class="news-card-box d-flex flex-column justify-content-center" id="scrollable-news">
 
-          <!--Scrollable content for news feed-->
-          <!--Should Just need one to append our AJAX calls to-->
-          <div class="card d-flex mt-3"
-            style="width: 22rem; border:1px solid grey;  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
-            <img class="p-2 card-img-top" src="https://placehold.it/280x210" alt="Card image cap">
-            <div class="card-body">
-              <h4 class="title-card">How About a Title!!</h4>
-              <p class="card-text">Maybe the Author can be quoted here?</p>
-              <p class="card-text">I guess a link?<button class="button" style="float:right;">or a Button?</button></p>
-            </div>
-          </div>
+<!--Scrollable content for news feed-->
+<div class="card">
+  <img class="card-img-top" src="https://placehold.it/280x210" alt="Card image cap">
+    <div class="card-body">
+      <h4 class="title-card">author</h4>
+          <p class="card-text">title</p>
+         </div>
+      </div>
 
+<div class="card">
+  <img class="card-img-top" src="https://placehold.it/280x210" alt="Card image cap">
+    <div class="card-body">
+      <h4 class="title-card">author</h4>
+        <p class="card-text">title</p>
+      </div>
+    </div>
 
-          <div class="card mt-3"
-            style="width: 22rem; align-self:center; border:1px solid grey; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
-            <img class="card-img-top" src="https://placehold.it/280x210" alt="Card image cap">
-            <div class="card-body">
-              <h4 class="title-card">How About a Title!!</h4>
-              <p class="card-text">Maybe the Author can be quoted here?</p>
-              <p class="card-text">I guess a link?<button class="button" style="float:right;">or a Button?</button></p>
-            </div>
-          </div>
-
-          <div class="card mt-3"
-            style="width: 22rem; align-self:center; border:1px solid grey;  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
-            <img class="card-img-top" src="https://placehold.it/280x210" alt="Card image cap">
-            <div class="card-body">
-              <h4 class="title-card">How About a Title!!</h4>
-              <p class="card-text">Maybe the Author can be quoted here?</p>
-              <p class="card-text">I guess a link?<button class="button" style="float:right;">or a Button?</button></p>
-            </div>
-          </div>
-
-          <div class="card mt-3"
-            style="width: 22rem; align-self:center; border:1px solid grey;  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
-            <img class="card-img-top" src="https://placehold.it/280x210" alt="Card image cap">
-            <div class="card-body">
-              <h4 class="title-card">How About a Title!!</h4>
-              <p class="card-text">Maybe the Author can be quoted here?</p>
-              <p class="card-text">I guess a link?<button class="button" style="float:right;">or a Button?</button></p>
-            </div>
-          </div>
-
-          <div class="card mt-3"
-            style="width: 22rem; align-self:center; border:1px solid grey;  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
-            <img class="card-img-top" src="https://placehold.it/280x210" alt="Card image cap">
-            <div class="card-body">
-              <h4 class="title-card">How About a Title!!</h4>
-              <p class="card-text">Maybe the Author can be quoted here?</p>
-              <p class="card-text">I guess a link?<button class="button" style="float:right;">or a Button?</button></p>
-            </div>
-          </div>
-
-          <div class="card mt-3"
-            style="width: 22rem; align-self:center; border:1px solid grey;  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
-            <img class="card-img-top" src="https://placehold.it/280x210" alt="Card image cap">
-            <div class="card-body">
-              <h4 class="title-card">How About a Title!!</h4>
-              <p class="card-text">Maybe the Author can be quoted here?</p>
-              <p class="card-text">I guess a link?<button class="button" style="float:right;">or a Button?</button></p>
-            </div>
-          </div>
-
-
-
+    <div class="card">
+  <img class="card-img-top" src="https://placehold.it/280x210" alt="Card image cap">
+    <div class="card-body">
+      <h4 class="title-card">author</h4>
+          <p class="card-text">title</p>
+         </div>
+      </div>
+      
+<div class="card">
+  <img class="card-img-top" src="https://placehold.it/280x210" alt="Card image cap">
+    <div class="card-body">
+      <h4 class="title-card">author</h4>
+        <p class="card-text">title</p>
+      </div>
+    </div>
         </div>
       </div>
     </div>
@@ -130,28 +95,25 @@
 
 
     <!--right column/ messaging/orders/cellar-->
-    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12" style="border:solid 2px rgb(0, 251, 255); height:800px;"
+    <div class="col-lg-7 col-md-12 col-sm-12 col-xs-12" style=" height:800px; padding-top:30px;"
       id="scrollable">
       <!--Dashboard contacts chart-->
-      <div class="row" style="border:solid 2px red; height:400px;">
-        <div class="col-md-12" style="border:solid 5px rgb(38, 255, 0); padding-top:22px;">
+      <div class="row" style=" height:380px;">
+        <div class="col-md-12" style="padding-top:28px;">
           <div class="card border-secondary "
-            style="min-width: 43rem; max-width: 43rem; border:solid 2px; height:330px;">
-            <div class="card-header" style="height: 55px;">
+            style="max-width: 40rem; border:solid 1px; height:330px;">
+            <div class="card-header" style="height: 45px;">
               <h3>ChatterBox</h3>
             </div>
-            <div class="card-body text-secondary d-flex justify-content-around"
-              style="border:solid 2px rgb(247, 0, 255);padding:5px 2px 8px 2px!important;">
-
-
-
+            <div class="card-body text-secondary d-inline-flex p-2"
+              style="padding:5px 2px 8px 2px!important; height:100%;">
 
               <!--Little Div for message box// notice the red borders for easier navigation-->
 
-              <div class="p-2 col-md-9" style="border:solid 2px red;">
+              <div class="p-2 col-lg-7 col-md-6 col-sm-6 col-xs-6">
                 <label style="margin-left:5px;">Messages:</label>
-                <div class="message-box" style="border:solid 2px red;">
-                  <ul class="messages" style="height:150px;overflow-y: scroll;">
+                <div class="message-box" style="height:150px; overflow-y: scroll; border: solid 1px grey; background-color:rgb(199, 199, 199);border-radius:3px;">
+                  <ul class="messages">
                     <li class="nav-item"><a class="nav-link" href="#">Link</a></li></br>
                     <li class="nav-item"><a class="nav-link" href="#">Link</a></li></br>
                     <li class="nav-item"><a class="nav-link" href="#">Link</a></li></br>
@@ -186,24 +148,21 @@
                   </ul>
                 </div>
 
-                <div style="margin: 15px 0 0 5px;">
-                  <input type="text" placeholder="message"><button class="btn btn-success btn-sm"
-                    type="button">Send</button>
+<!--Little Div for chat names// notice the red borders for easier navigation-->
+                <div "p-2 col-lg-5 col-md-6 col-sm-6 col-xs-6" style="margin: 15px 0 0 5px; width: 95%;">
+                  <input type="text" style="width: 100%" placeholder="message">
                 </div>
               </div>
-
-
-
-              <!--Little Div for chat names// notice the red borders for easier navigation-->
-              <div class="p-2 col-md-3 float-right" style="border:solid 2px red;">
+              
+              <div class="p-2 col-lg-4 col-md-6 col-sm-6 col-xs-6">
                 <label style="margin-left:5px;">online</label>
-                <div class="good-place-for-names"
-                  style="border:solid 2px red;padding-left:3px;height:170px;overflow-y: scroll;">
+                <div class="good-place-for-names" style="padding-left:3px;height:150px;overflow-y: scroll; border: solid 1px grey; background-color:rgb(199, 199, 199); border-radius:3px;">
                   <p>Susie Que</br>Beth Assing</br>Julie Foo</br>Big Ben</br>Super manSusie Que</br>Beth
                     Assing</br>Julie Foo</br>Big Ben
                     </br>Super manSusie Que</br>Beth Assing</br>Julie Foo</br>Big Ben</br>Super man</br>Julie
                     Foo</br>Big Ben</br>Super man</p>
                 </div>
+                <button class="btn btn-success btn-sm" style="margin: 15px 0 0 5px; width: 60%; align-self:center;" type="button">Send</button>
               </div>
             </div>
           </div>
@@ -213,25 +172,25 @@
 
 
       <!--Dashboard orders and cellar chart-->
-      <div class="row d-flex flex-wrap" style="border:solid 2px red">
+      <div class="row">
         <!--Dashboard your cellar chart-->
-        <div class="col-md-6" style="border:solid 5px rgb(38, 255, 0); padding-top:10px;">
-          <div class="card border-secondary" style="min-width: 20rem; max-width: 20rem;">
-            <div class="card-header" style="height: 55px;">
+        <div class="col-lg-5 col-md-12 col-sm-12 col-xs-12">
+          <div class="card border-secondary" style="min-width: 18rem; max-width: 18rem;">
+            <div class="card-header" style="height: 45px;">
               <h3>Your Cellar</h3>
             </div>
-            <div class="card-body text-secondary" style="border:solid 2px red;">
+            <div class="card-body text-secondary">
 
               <h5 class="card-title" style="color:black; margin-left:6px;">29 Cases</h5>
               <div class="good-place-for-names"
-                style="border:solid 2px red;padding-left:3px;height:170px;overflow-y: scroll;">
+                style="padding-left:3px;height:150px;overflow-y: scroll; border: solid 1px grey; background-color:rgb(199, 199, 199); border-radius:3px;">
                 <p class="card-text">2 cases Merlot.</br>2 cases Bordeaux.</br>2 cases Bordeaux.</br>10 cases
                   Chardonay.</br>4 cases Haux Medoc.</br>10 cases Chardonay.</br>4 cases Haux Medoc.</br>7 cases Pinot
                   Grigio.</br>4 cases Sparkling.</br>4 cases Haux Medoc.</br>7 cases Pinot Grigio.</br>4 cases
                   Sparkling.</br></p>
               </div>
-              <p>
-                <hr>25 pending case orders</p>
+              <p style="float:left; margin-top:3px">...25 case orders</p>
+                <button class="btn btn-success btn-sm" style="margin: 15px 0 0 5px; width: 30%; float:right;" type="button"><a href="/mycellar" style="color:white; !imprtant">Cellar</a></button>
             </div>
           </div>
         </div>
@@ -239,29 +198,29 @@
 
 
         <!--Dashboard orders Dashboard chart-->
-        <div class="col-md-6" style="border:solid 5px rgb(38, 255, 0); padding-top:10px;">
-          <div class="card border-secondary" style="min-width: 20rem; max-width: 20rem;">
-            <div class="card-header" style="height: 55px;">
+        <div class="col-lg-5 col-md-12 col-sm-12 col-xs-12">
+          <div class="card border-secondary" style="min-width: 18rem; max-width: 18rem;">
+            <div class="card-header" style="height: 45px;">
               <h3>Orders</h3>
             </div>
-            <div class="card-body text-secondary" style="border:solid 2px red;">
+            <div class="card-body text-secondary">
 
               <h5 class="card-title" style="color:black; margin-left:6px;">Orders Processing:</h5>
               <div class="good-place-for-names"
-                style="border:solid 2px red;padding-left:3px;height:170px;overflow-y: scroll;">
+                style="padding-left:3px; height:150px;overflow-y: scroll; border: solid 1px grey; background-color:rgb(199, 199, 199); border-radius:3px;">
                 <p class="card-text">2 cases Merlot.</br>2 cases Bordeaux.</br>2 cases Bordeaux.</br>10 cases
                   Chardonay.</br>4 cases Haux Medoc.</br>10 cases Chardonay.</br>4 cases Haux Medoc.</br>7 cases Pinot
                   Grigio.</br>4 cases Sparkling.</br>4 cases Haux Medoc.</br>7 cases Pinot Grigio.</br>4 cases
                   Sparkling.</br></p>
               </div>
-              <p>
-                <hr>25 pending case orders</p>
+             <p style="float:left; margin-top:3px">...2 shipping</p>
+                <button class="btn btn-success btn-sm" style="margin: 15px 0 0 5px; width: 30%; float:right;" type="button"><a href="/orders" style="color:white; !imprtant">Orders</a></button>
             </div>
           </div>
         </div>
 
 
-
+<div class="col-lg-2 col-md-2 hidden-sm hidden-xs"></div>
 
       </div>
       <!--end of small dashboard items-->
