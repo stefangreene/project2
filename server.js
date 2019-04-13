@@ -37,8 +37,7 @@ require("./config/passport/passport.js")(passport, db.user);
 require("./routes/authRoutes.js")(app, passport, db.user);
 require("./routes/apiRoutes")(app, passport);
 require("./routes/htmlRoutes")(app);
-require("./routes/api-routes.js")(app, passport, db.user);
-
+require("./routes/api-Routes.js")(app, passport, db.user);
 
 var syncOptions = { force: false };
 
