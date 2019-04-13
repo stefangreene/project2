@@ -3,7 +3,7 @@
 
   <!--favicon-->
   <div class="col-sm-12 col-md-12 col-lg-8 d-flex" id="navigation-box">
-    <i class="fa fa-hacker-news fa-4x" aria-hidden="true" id="favicon"></i>
+    <i class="fa fa-hacker-news fa-3x" aria-hidden="true" id="favicon"></i>
 
     <!--collapsible navigation-->
     <div class="topnav" id="myTopnav">
@@ -33,7 +33,7 @@
         </div>
       </div>
       <!--User logo......Favicon-->
-      <div class="userLogo"><i class="fa fa-user-circle fa-4x" aria-hidden="true" id="favicon"></i></div>
+      <div class="userLogo"><i class="fa fa-user-circle fa-3x" aria-hidden="true" id="favicon"></i></div>
     </div>
   </div>
 </div>
@@ -41,10 +41,10 @@
 
 
 <!--background and body container dashboard contents-->
-<div class="container-fluid" id="data-page">
-    <div class="row d-flex flex-wrap">
+<div class="container-fluid" id="data-page" style="border:solid 2px red; height:100%;">
+    <div class="row d-flex flex-wrap" style="h">
       <div class="col-lg-1 hidden-md hidden-sm hidden-xs"></div>
-        <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12" id="scrollable">
+        <div class="col-lg-4 col-md-8 col-sm-12 col-xs-12" id="scrollable">
 
 
 <div class="col-md-12 mt-3" id="news-feed-container">
@@ -95,10 +95,40 @@
 
 
     <!--right column/ messaging/orders/cellar-->
-    <div class="col-lg-7 col-md-12 col-sm-12 col-xs-12" style=" height:800px; padding-top:30px;"
+    <div class="col-lg-7 col-md-4 col-sm-12 col-xs-12" style="border:solid 2px red; height:800px; padding-top:30px;"
       id="scrollable">
       <!--Dashboard contacts chart-->
-      <div class="row" style=" height:380px;">
+
+
+<div class = "container">
+        <!--name entry-->
+            <div id = "name-entry" class = "row">
+      <form id = "name-form">
+<!-- error message for duplicate names-->
+          <div id = "duplicate-name"></div><!-- ask for user name-->enter your name:<br />
+        <input type = "text" size = "35" id = "name" />
+        <input type = "submit" value = "enter the chat room" />
+      </form>
+    </div><!-- chat content -->
+  <div id = "chat">
+      <div class = "row"><!-- messages and user input to send -->
+        <div class = "col-sm-7">
+            <div id = "messages"></div>
+      <form id = "send-message">
+        <input type = "text" size = "35" id = "message" />
+          <input type = "submit" value = "Send" />
+        </form>
+      </div><!-- list of users -->
+        <div class = "col-sm-2">
+            <div id = "users"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+      <!--<div class="row" style=" height:380px; border:red solid 3px;">
         <div class="col-md-12" style="padding-top:28px;">
           <div class="card border-secondary "
             style="max-width: 40rem; border:solid 1px; height:330px;">
@@ -148,7 +178,7 @@
                   </ul>
                 </div>
 
-<!--Little Div for chat names// notice the red borders for easier navigation-->
+<!--Little Div for chat names// notice the red borders for easier navigation
                 <div "p-2 col-lg-5 col-md-6 col-sm-6 col-xs-6" style="margin: 15px 0 0 5px; width: 95%;">
                   <input type="text" style="width: 100%" placeholder="message">
                 </div>
@@ -167,7 +197,7 @@
             </div>
           </div>
         </div>
-      </div>
+      </div>-->
 
 
 

@@ -25,9 +25,9 @@ html, body{
 #navigation-box {
     display:flex;
     background-color:rgb(194, 193, 193);
-    
     border-radius: 10px 10px 0 0;
-    float: left; z-index:2
+    float: left;
+    z-index:2;
 }
 .topnav {
   align-self: center;
