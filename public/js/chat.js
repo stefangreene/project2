@@ -7,7 +7,7 @@ jQuery(function($) {
     var $usersList = $('#users');
     var $messageForm = $('#send-message');
     var $messageTextBox = $('#message');
-    var $messages = $('#messages');
+    var $messages = $('#message-screen');
 
     // function to run when users enter a name and submit
     $nameForm.submit(function(e) {
