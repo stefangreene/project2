@@ -158,10 +158,10 @@ var message = 'Internal Server Error';
 var response = '';
 var id = req.params.ID;
  var putData = {
-    name_of_wine: req.body.nameOfWine,
-    unit_price: req.body.purchasedPrice,
-    quantity: req.body.quantity,
-    status: req.body.status
+  name_of_wine: req.body.name_of_wine,
+  unit_price: req.body.unit_price,
+  quantity: req.body.quantity,
+  status: req.body.status
 }
 db.Order_Product.update(putData,
     {   where: {
