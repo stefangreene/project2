@@ -1,44 +1,23 @@
-module.exports = function(sequelize, Sequelize) {
-  var order = sequelize.define("order", {
-    id: {
-      autoIncrement: true,
-      primaryKey: true,
-      type: Sequelize.INTEGER
-    },
-
-    name: {
-      type: Sequelize.STRING
-    },
-
-    quantity: {
-      type: Sequelize.INTEGER
-    },
-
-    unitPrice: {
-      type: Sequelize.STRING
-    },
-
-    totalPrice: {
-      type: Sequelize.INTEGER
-    },
-
-    wineId: {
-      type: Sequelize.STRING
-    },
-
-    customerId: {
-      type: Sequelize.INTEGER
-    },
-    seller: {
-      type: Sequelize.INTEGER,
-      allowNull: false
-    },
-
-    status: {
-      type: Sequelize.ENUM("open", "shipped"),
-      defaultValue: "open"
-    }
+module.exports = function(sequelize, DataTypes) {
+  var Order_Product = sequelize.define("Order_Product", {
+  name_of_wine: DataTypes.STRING, 
+  variety: DataTypes.STRING,
+  unit_price: DataTypes.INTEGER,  
+  quantity: DataTypes.INTEGER,
+  wineId: {
+    type: DataTypes.STRING
+  },
+  customerId: {
+    type: DataTypes.INTEGER
+  },
+  seller: {
+    type: DataTypes.INTEGER//,
+    //allowNull: false
+  },
+  status: {
+    type: DataTypes.ENUM("open", "shipped"),
+    defaultValue: "open"
+  }
   });
-
-  return order;
+  return Order_Product;
 };
