@@ -1,5 +1,5 @@
 $.get("/api/order", function(data) {     
-  console.log(data);  
+  //console.log(data);  
       var liHtml ='<tbody>';
       //var editButton='<button type="submit" class="btn btn-secondary mb-2 editRecord" id="createAccBtn" data-toggle="modal" data-target="#EditModal">Edit</button>';
       for (var i = 0; i < data.length; i++) { 
@@ -16,7 +16,7 @@ $.get("/api/order", function(data) {
              } 
           liHtml +="</tbody>";
          $("#well-section").append(liHtml); 
-        var LiHead='<tfoot><tr >   <th width="15%">Order ID</th>  <th width="15%">Name of Wine</th>  <th width="15%">purchased price</th> <th width="15%">Quantity</th> <th width="15%">Status</th> <th width="15%">Action</th> </tr><tfoot>';
+        var LiHead='<tfoot><tr >   <th width="15%">Order ID</th>  <th width="15%">Name of Wine</th>  <th width="15%">unit price</th> <th width="15%">Quantity</th> <th width="15%">Status</th> <th width="15%">Action</th> </tr><tfoot>';
       $("#well-section").append(LiHead);
       var table = $('#well-section').DataTable( {
           "lengthMenu": [[5, 10, 20, -1], [5, 10, 20, "All"]]
@@ -252,6 +252,19 @@ $(document).ready(function(){
                     $('#PurchasedPriceEdit').val(data2[0].unit_price); 
                     });
                   });
+
+                  $("select#NameOfWine").change(function(){
+                    var selectedVariety = $('#Variety').val();
+                    var SelectedWine=$('#NameOfWine').val();//alert(SelectedWine);
+                    //$('#NameOfWine').find('option').remove().end();
+                    
+                if (selectedVariety!= "" ||  selectedVariety!= "" ) {
+                  var apicall="/api/wine/Dropdown/" +selectedVariety +"/" + SelectedWine}
+                
+                $.get(apicall, function(data2) {    
+                  $('#PurchasedPrice').val(data2[0].unit_price); 
+                  });
+                });
 
                
 });

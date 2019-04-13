@@ -19,7 +19,7 @@
   
   .customBtn {
     background: #286090;
-    width: 150px;
+    width: 200px;
     border-radius: 5px;
   }
   
@@ -53,6 +53,4 @@ thead {text-align: left;}
  color:#585858;
 }
 
-a{    
-    margin-left: 100px;
-}
+

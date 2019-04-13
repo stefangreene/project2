@@ -20,10 +20,10 @@ module.exports = function(app) {
     res.render("5contacts");
   });
 
-  app.get("/orders", isLoggedIn, function(req, res) {
+  app.get("/orderss", isLoggedIn, function(req, res) {
     res.render("6orders");
   });
-app.get("/employee",isLoggedIn,function(req, res) {
+app.get("/orders",isLoggedIn,function(req, res) {
     res.sendFile(path.join(__dirname, "../public/allOrder.html"));
   });
 
@@ -57,7 +57,7 @@ app.get("/employee",isLoggedIn,function(req, res) {
        //return res.json(result);
      //});
 if (req.params.Variety && req.params.wineName) {
-db.wines.findAll({
+db.Wine.findAll({
         where: {
          variety: req.params.Variety,
           name_of_wine:req.params.wineName
@@ -69,7 +69,7 @@ db.wines.findAll({
     }
       
     else if (req.params.Variety) {
-      db.wines.findAll({
+      db.Wine.findAll({
         where: {
           variety: req.params.Variety
         }
@@ -78,7 +78,7 @@ db.wines.findAll({
       });
     }
     else {
-      db.wines.findAll().then(function(result) {
+      db.Wine.findAll().then(function(result) {
         return res.json(result);
       });
     }
@@ -89,7 +89,7 @@ app.post("/api/new", isLoggedIn, function(req, res) {
   // Take the request...
   var order = req.body;
   console.log(order);
-  db.order_products.create({
+  db.Order_Product.create({
     name_of_wine: order.name_of_wine,
     variety: order.variety,
     unit_price: order.unit_price,
@@ -129,7 +129,7 @@ app.post("/api/import", isLoggedIn, function(req, res) {
 app.delete("/api/Delete/:id", isLoggedIn, function(req, res) {
   // We just have to specify which todo we want to destroy with "where"
   var parameterid=req.params.id;   
-  db.order_products.destroy({
+  db.Order_Product.destroy({
     where: {
       id: parameterid
     }
@@ -143,7 +143,7 @@ app.get("/api/ReadByID/:ID", isLoggedIn, function(req, res) {
   if (req.params.ID) {
     // Display the JSON for ONLY that order.
     // (Note how we're using the ORM here to run our searches)
-    db.order_products.findOne({
+    db.Order_Product.findOne({
       where: {
         id: req.params.ID
       }
@@ -163,7 +163,7 @@ var id = req.params.ID;
     quantity: req.body.quantity,
     status: req.body.status
 }
-db.order_products.update(putData,
+db.Order_Product.update(putData,
     {   where: {
             id: id
         }

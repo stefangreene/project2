@@ -88,7 +88,7 @@ crossorigin="anonymous"></script>
         
           
          
-<button type="submit" class="btn btn-secondary mb-2 customBtn" id="createAccBtn" data-toggle="modal" data-target="#accModal">Create new</button>
+<button type="submit" class="btn btn-secondary mb-2 customBtn" id="createAccBtn" data-toggle="modal" data-target="#accModal">Create New Order</button>
 <br><br>
 
 <div id="myInputTextField">
@@ -101,7 +101,7 @@ crossorigin="anonymous"></script>
       <tr>
           <th class='columnFilter'>Order ID</th>
           <th class='columnFilter'>Name of Wine</th>
-          <th class='columnFilter'>purchased price</th>  
+          <th class='columnFilter'>Unit Price</th>  
           <th class='columnFilter'>quantity</th> 
           <th class='columnFilter'>status</th> 
            <th >Action</th>  
@@ -122,7 +122,7 @@ crossorigin="anonymous"></script>
     <div class="modal-dialog modal-dialog-centered" role="document">
       <div class="modal-content">
         <div class="modal-header text-white">
-          <h5 class="modal-title text-center" id="accCreate">Customer Creation</h5>
+          <h5 class="modal-title text-center" id="accCreate">new order</h5>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
@@ -154,7 +154,7 @@ crossorigin="anonymous"></script>
                 </div>
                 <div id="PurchasedPriceField">
                     <label for="PurchasedPrice">Unit Price</label>
-                  <input type="Number" class="form-control txtBox" placeholder="Purchased Price" id="PurchasedPrice" required>
+                  <input type="Number" class="form-control txtBox" style="background-color: yellow" placeholder="Purchased Price" id="PurchasedPrice" readonly>
                 </div>
                 <label for="Quantity">Quantity</label>
                 <div id="QuantityField">
@@ -162,7 +162,10 @@ crossorigin="anonymous"></script>
                 </div>
                 <div id="StatusField">
                     <label for="Status">Status</label>
-                  <input type="text" class="form-control txtBox" placeholder="Status" id="Status" required>
+                  <select type="text" class="form-control txtBox"  style="background-color: yellow" placeholder="Status" id="Status" disabled="true">                       
+                      <option value="Open">Open</option>
+                      <option value="Shipped">Shipped</option>
+                  </select>
                 </div>
                  
                 </div>
@@ -195,10 +198,18 @@ crossorigin="anonymous"></script>
                     <label for="NameOfWineEdit">VarietyEdit</label>
                     <select  type="text" class="form-control txtBox" placeholder="Variety" id="VarietyEdit" required> 
                       <option value="">Select</option> 
-                      <option value="var 1">var 1</option>
-                      <option value="var 2">var 2</option>
-                      <option value="var 3">var 3</option>
-                      <option value="var 4">var 5</option>
+                      <option value="Albarino">Albarino</option>
+                      <option value="Bordeaux">Bordeaux</option>
+                      <option value="Cabernet Sauvignon">Cabernet Sauvignon</option>
+                      <option value="Carignan ">Carignan </option>                         
+                      <option value="Chardonnay">Chardonnay</option>
+                      <option value="Grenache">Grenache</option>
+                      <option value="Malbec">Malbec</option>
+                      <option value="Muscat ">Muscat </option> 
+                      <option value="Pinot Gris">Pinot Gris</option>
+                      <option value="Pinot Noir">Pinot Noir</option>
+                      <option value="Pollock">Pollock</option>
+                      <option value="Riesling ">Riesling </option>
                     </select>
                   </div>
               <div id="NameOfWineField">
@@ -207,7 +218,7 @@ crossorigin="anonymous"></script>
               </div>
               <div id="PurchasedPriceField">
                   <label for="PurchasedPriceEdit">Name of wine</label>
-                <input type="text" class="form-control txtBox" placeholder="Purchased Price" id="PurchasedPriceEdit" required>
+                <input type="text" class="form-control txtBox" style="background-color: yellow" placeholder="Unit Price" id="PurchasedPriceEdit"  readonly>
               </div>
               <div id="QuantityField">
                   <label for="QuantityEdit">Quantity</label>
@@ -215,7 +226,11 @@ crossorigin="anonymous"></script>
               </div>
               <div id="StatusField">
                   <label for="StatusEdit">Status</label>
-                <input type="text" class="form-control txtBox" placeholder="Status" id="StatusEdit" required>
+                
+                <select type="text" class="form-control txtBox"   placeholder="Status" id="StatusEdit" readonly>                       
+                    <option value="Open">Open</option>
+                    <option value="Shipped">Shipped</option>
+                </select>
               </div>
                
               </div>

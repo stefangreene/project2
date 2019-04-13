@@ -24,7 +24,7 @@ module.exports = function(app) {
          //return res.json(result);
        //});
 if (req.params.Variety && req.params.wineName) {
-  db.wines.findAll({
+  db.Wine.findAll({
           where: {
            variety: req.params.Variety,
             name_of_wine:req.params.wineName
@@ -36,7 +36,7 @@ if (req.params.Variety && req.params.wineName) {
       }
         
       else if (req.params.Variety) {
-        db.wines.findAll({
+        db.Wine.findAll({
           where: {
             variety: req.params.Variety
           }
@@ -45,7 +45,7 @@ if (req.params.Variety && req.params.wineName) {
         });
       }
       else {
-        db.wines.findAll().then(function(result) {
+        db.Wine.findAll().then(function(result) {
           return res.json(result);
         });
       }
