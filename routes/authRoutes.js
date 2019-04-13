@@ -1,3 +1,4 @@
+var db = require("../models");
 module.exports = function(app, passport, user) {
   var User = user;
 
@@ -48,6 +49,34 @@ module.exports = function(app, passport, user) {
       res.json(dbTodo);
     });
   });
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
   app.get("/logout", function(req, res) {
