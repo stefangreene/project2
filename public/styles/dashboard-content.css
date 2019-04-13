@@ -83,6 +83,18 @@ html, body{
     background-color:rgb(208, 208, 208);
   }
 
+  div#message-screen{
+    height:150px; 
+    overflow-y: scroll;
+    border: solid 1px grey;
+    background-color:rgb(199, 199, 199);
+    border-radius:3px; 
+    height: 65%;
+    width: 100%;
+    object-fit: contain;
+
+  }
+
 
 
 

@@ -82,40 +82,48 @@
 
 <!--------------------------------------this is chatter-------------------------------->
     <!--right column/ messaging/orders/cellar-->
-    <div class="col-lg-7 col-md-4 col-sm-12 col-xs-12" style="border:solid 2px red; height:800px; padding-top:30px; align-content:center;"
+    <div class="col-lg-7 col-md-4 col-sm-12 col-xs-12" style="border:solid 2px purple; height:800px; padding-top:65px !important; align-content:center;"
       id="scrollable">
       <!--Dashboard contacts chart-->
 
 
-<div class = "container" id="chatterbox" style="border: solid 3px blue">
+<div class = "container" id="chatterbox" style="border: solid 2px rgb(84, 84, 84); overflow: auto; background-color:rgb(206, 206, 206);border-radius:5px;">
         <!--name entry-->
-            <div id = "name-entry" class = "row">
+            <div id = "name-entry" class = "row" style="border: solid 3px rgb(221, 255, 0);padding-left:25px;width:75%; margin-left:25px;">
       <form id = "name-form">
 <!-- error message for duplicate names-->
           <div id = "duplicate-name"></div><!-- ask for user name-->enter your name:<br />
         <input type = "text" size = "35" id = "name" />
         <input type = "submit" value = "enter the chat room" />
       </form>
-    </div><!-- chat content -->
-  <div id = "chat">
-      <div class = "row"><!-- messages and user input to send -->
+    </div>
+
+<div class="row" style="height:265px;">
+  <div class="p-2 col-lg-8 col-md-8 col-sm-12 col-xs-12" style="border: solid 3px rgb(255, 111, 0)">
+    <label style="margin-left:5px;">Messages:</label>
+        <div class="message-box" id="message-screen">
+    </div>
+</div>
+ <div class="p-2 col-lg-4 col-md-4 col-sm-12 col-xs-12" style="border: solid 3px rgb(255, 111, 0)">
+ <label style="margin-left:5px;">Users:</label>
+ <div class = "col-sm-12" id="message-screen">
+    <div id = "users"></div>
+  </div>
+ </div>
+      <!-- chat content -->
+  <div id = "chat" style="border: solid 3px rgb(247, 0, 206);width:95%; d-flex-justify; height:65px;overflow:auto;">
         <div class = "col-sm-7">
             <div id = "messages"></div>
-      <form id = "send-message">
-        <input type = "text" size = "35" id = "message" />
+      <form id = "send-message" >
+        <input type = "text" size = "65" id = "message" />
           <input type = "submit" value = "Send" />
         </form>
       </div><!-- list of users -->
-        <div class = "col-sm-2">
-            <div id = "users"></div>
-          </div>
-        </div>
-      </div>  
-      <div class="p-2 col-lg-7 col-md-6 col-sm-6 col-xs-6">
-                <label style="margin-left:5px;">Messages:</label>
-                <div class="message-box" style="height:150px; overflow-y: scroll; border: solid 1px grey; background-color:rgb(199, 199, 199);border-radius:3px;">
-    </div>
-    </div>
+    </div> 
+</div>
+</div>
+
+
 
 <!------------------------------------------end chattter------------------------------------>
 
@@ -134,10 +142,10 @@
 
 
       <!--Dashboard orders and cellar chart-->
-      <div class="row" style="border: solid 3px blue">
+      <div class="row" style="border: solid 3px blue; width:90%; margin-left:35px;">
         <!--Dashboard your cellar chart-->
-        <div class="col-lg-5 col-md-12 col-sm-12 col-xs-12">
-          <div class="card border-secondary" style="min-width: 18rem; max-width: 18rem;">
+        <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+          <div class="card border-secondary" style="min-width: 20rem; max-width: 20rem;">
             <div class="card-header" style="height: 45px;">
               <h3>Your Cellar</h3>
             </div>
@@ -161,7 +169,7 @@
 
         <!--Dashboard orders Dashboard chart-->
         <div class="col-lg-5 col-md-12 col-sm-12 col-xs-12">
-          <div class="card border-secondary" style="min-width: 18rem; max-width: 18rem;">
+          <div class="card border-secondary" style="min-width: 20rem; max-width: 20rem;">
             <div class="card-header" style="height: 45px;">
               <h3>Orders</h3>
             </div>
@@ -187,7 +195,7 @@
       </div>
       <!--end of small dashboard items-->
 
-    </div><!-- end right column-->
+    
 
 
   </div>
