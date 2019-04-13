@@ -82,14 +82,14 @@
 
 <!--------------------------------------this is chatter-------------------------------->
     <!--right column/ messaging/orders/cellar-->
-    <div class="col-lg-7 col-md-4 col-sm-12 col-xs-12" style="border:solid 2px purple; height:800px; padding-top:65px !important; align-content:center;"
+    <div class="col-lg-7 col-md-4 col-sm-12 col-xs-12" style="height:800px; padding:65px 40px 0 0 !important; align-content:center;"
       id="scrollable">
       <!--Dashboard contacts chart-->
 
 
-<div class = "container" id="chatterbox" style="border: solid 2px rgb(84, 84, 84); overflow: auto; background-color:rgb(206, 206, 206);border-radius:5px;">
+<div class = "container" id="chatterbox" style="margin:0 10px 5px 10px;border: solid 2px rgb(84, 84, 84); overflow: auto; background-color:rgb(206, 206, 206);border-radius:5px; padding:20px 30px 30px 30px !important;">
         <!--name entry-->
-            <div id = "name-entry" class = "row" style="border: solid 3px rgb(221, 255, 0);padding-left:25px;width:75%; margin-left:25px;">
+            <div id = "name-entry" class = "row" style="padding-left:25px;width:75%; margin-left:15px;">
       <form id = "name-form">
 <!-- error message for duplicate names-->
           <div id = "duplicate-name"></div><!-- ask for user name-->enter your name:<br />
@@ -97,21 +97,24 @@
         <input type = "submit" value = "enter the chat room" />
       </form>
     </div>
+    <hr>
 
 <div class="row" style="height:265px;">
-  <div class="p-2 col-lg-8 col-md-8 col-sm-12 col-xs-12" style="border: solid 3px rgb(255, 111, 0)">
+  <div class="p-2 col-lg-7 col-md-8 col-sm-12 col-xs-12" style="">
     <label style="margin-left:5px;">Messages:</label>
         <div class="message-box" id="message-screen">
     </div>
 </div>
- <div class="p-2 col-lg-4 col-md-4 col-sm-12 col-xs-12" style="border: solid 3px rgb(255, 111, 0)">
+ <div class="p-2 col-lg-4 col-md-4 col-sm-12 col-xs-12" style="">
  <label style="margin-left:5px;">Users:</label>
  <div class = "col-sm-12" id="message-screen">
     <div id = "users"></div>
   </div>
  </div>
+ <div class="col-lg-2 col-md-2 hidden-sm hidden-xs"></div>
       <!-- chat content -->
-  <div id = "chat" style="border: solid 3px rgb(247, 0, 206);width:95%; d-flex-justify; height:65px;overflow:auto;">
+  <div id = "chat" style="height:65px;">
+    <hr><hr>
         <div class = "col-sm-7">
             <div id = "messages"></div>
       <form id = "send-message" >
@@ -142,7 +145,7 @@
 
 
       <!--Dashboard orders and cellar chart-->
-      <div class="row" style="border: solid 3px blue; width:90%; margin-left:35px;">
+      <div class="row" style=" align-content:center; border: solid 2px rgb(167, 167, 167); width:90%; margin-left:35px; border-radius:5px; padding:10px;">
         <!--Dashboard your cellar chart-->
         <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
           <div class="card border-secondary" style="min-width: 20rem; max-width: 20rem;">
