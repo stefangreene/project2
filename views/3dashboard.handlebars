@@ -52,7 +52,7 @@
 
 
 <div class="col-md-12 mt-3" id="news-feed-container">
-  <label id="post"><h2>Maybe Make A Post</h2><input type="text" placeholder="Post">
+  <label id="post"><h2>The Grape Vine</h2><input type="text" placeholder="Post">
       <button class="btn btn-success btn-sm" id="post-submit">submit!</button>
     </label>
     
@@ -82,12 +82,12 @@
 
 <!--------------------------------------this is chatter-------------------------------->
     <!--right column/ messaging/orders/cellar-->
-    <div class="col-lg-7 col-md-4 col-sm-12 col-xs-12" style="border:solid 2px red; height:800px; padding-top:30px;"
+    <div class="col-lg-7 col-md-4 col-sm-12 col-xs-12" style="border:solid 2px red; height:800px; padding-top:30px; align-content:center;"
       id="scrollable">
       <!--Dashboard contacts chart-->
 
 
-<div class = "container">
+<div class = "container" id="chatterbox" style="border: solid 3px blue">
         <!--name entry-->
             <div id = "name-entry" class = "row">
       <form id = "name-form">
@@ -110,7 +110,11 @@
             <div id = "users"></div>
           </div>
         </div>
-      </div>
+      </div>  
+      <div class="p-2 col-lg-7 col-md-6 col-sm-6 col-xs-6">
+                <label style="margin-left:5px;">Messages:</label>
+                <div class="message-box" style="height:150px; overflow-y: scroll; border: solid 1px grey; background-color:rgb(199, 199, 199);border-radius:3px;">
+    </div>
     </div>
 
 <!------------------------------------------end chattter------------------------------------>
@@ -119,50 +123,18 @@
 
 <!-----------------------------------------old Chatter------------------------------------>
      
-      <!--<div class="row" style=" height:380px; border:red solid 3px;">
-        <div class="col-md-12" style="padding-top:28px;">
-          <div class="card border-secondary "
-            style="max-width: 40rem; border:solid 1px; height:330px;">
-            <div class="card-header" style="height: 45px;">
-              <h3>ChatterBox</h3>
-            </div>
-            <div class="card-body text-secondary d-inline-flex p-2"
-              style="padding:5px 2px 8px 2px!important; height:100%;">
 
-              <!--Little Div for message box// notice the red borders for easier navigation-->
 
-              <div class="p-2 col-lg-7 col-md-6 col-sm-6 col-xs-6">
-                <label style="margin-left:5px;">Messages:</label>
-                <div class="message-box" style="height:150px; overflow-y: scroll; border: solid 1px grey; background-color:rgb(199, 199, 199);border-radius:3px;">
+            
           
 
-<!--Little Div for chat names// notice the red borders for easier navigation
-                <div "p-2 col-lg-5 col-md-6 col-sm-6 col-xs-6" style="margin: 15px 0 0 5px; width: 95%;">
-                  <input type="text" style="width: 100%" placeholder="message">
-                </div>
-              </div>
-              
-              <div class="p-2 col-lg-4 col-md-6 col-sm-6 col-xs-6">
-                <label style="margin-left:5px;">online</label>
-                <div class="good-place-for-names" style="padding-left:3px;height:150px;overflow-y: scroll; border: solid 1px grey; background-color:rgb(199, 199, 199); border-radius:3px;">
-                  <p>Susie Que</br>Beth Assing</br>Julie Foo</br>Big Ben</br>Super manSusie Que</br>Beth
-                    Assing</br>Julie Foo</br>Big Ben
-                    </br>Super manSusie Que</br>Beth Assing</br>Julie Foo</br>Big Ben</br>Super man</br>Julie
-                    Foo</br>Big Ben</br>Super man</p>
-                </div>
-                <button class="btn btn-success btn-sm" style="margin: 15px 0 0 5px; width: 60%; align-self:center;" type="button">Send</button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>-->
 <!------------------------------------------end old chattter------------------------------------>
 
 
 
 
       <!--Dashboard orders and cellar chart-->
-      <div class="row">
+      <div class="row" style="border: solid 3px blue">
         <!--Dashboard your cellar chart-->
         <div class="col-lg-5 col-md-12 col-sm-12 col-xs-12">
           <div class="card border-secondary" style="min-width: 18rem; max-width: 18rem;">
